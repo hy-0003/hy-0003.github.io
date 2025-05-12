@@ -1,0 +1,146 @@
+body {
+    background-color:white;
+}
+
+p {color:#252526}
+h1 {color:#252526;}
+h2 {color:#252526}
+h3 {color:#252526}
+h4 {color:#252526}
+h5 {color:#252526}
+h6 {color:#252526}
+a {color:#252526}
+
+.horizontal-divider {
+    border: none;
+    height: 5px;
+    background-color: #ccc; /* 分割线颜色 */
+    margin: 0;
+    width: 100%;
+}
+
+
+/*圆形图片*/
+.circular-image {
+    border-radius: 70%; /* 将边框半径设置为 50%，使图片呈圆形 */
+    width: 250px; 
+    height: 250px; 
+    object-fit: cover; 
+    margin: 20px auto; /* 可选：将图片水平居中 */
+    display: block;
+}
+
+
+.info-card {
+    background-color: #f9f9f9; /* 设置背景颜色 */
+    border: 1px solid #ddd; /* 添加边框 */
+    border-radius: 12px; /* 圆角边框 */
+    padding: 30px; /* 内边距 */
+    width: 70%; /* 宽度 */
+    margin: 30px auto; /* 上下外边距 20px，左右居中 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* 添加阴影 */
+    line-height: 1.6; /* 行高 */
+    font-size: 16px; /* 字体大小 */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* 添加过渡效果 */
+}
+
+
+.info-card:hover{
+    transform: translateY(-5px);
+    background-color: #f0f0f0;
+}
+.info-card::first-line {
+    font-weight: bold;  
+    font-size: 36px;
+    text-align: center;
+    grid-column: span 2; 
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.info-item {
+    font-size: 24px;
+    font-style: italic;
+}
+
+
+.info-study{
+    background-color: #f9f9f9; /* 设置背景颜色 */
+    border: 3px solid #ddd; /* 添加边框 */
+    border-radius: 18px; /* 圆角边框 */
+    padding: 12px; /* 内边距 */
+    width: 80%; /* 宽度 */
+    margin: 20px auto; /* 上下外边距 20px，左右居中 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影 */
+}
+.info-study:hover{
+    transform: translateY(-5px);
+    background-color: #f0f0f0;
+}
+
+.info-study h2{
+    font-size: 42px;
+    font-weight: bold;
+}
+.info-study h3{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.gpa-rank{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+
+
+.image-grid {
+    display: grid;
+    gap: 20px; /* 行间距 */
+}
+
+.grid-row {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 10px; /* 图片间距 */
+    justify-content: center; /* 水平居中 */
+}
+
+.grid-row img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px; /* 圆角 */
+}
+
+
+
+.beautiful-button {
+            background-color: #848484; /* 背景颜色 */
+            border: none; /* 移除边框 */
+            color: white; /* 文字颜色 */
+            padding: 15px 32px; /* 内边距 */
+            text-align: center; /* 文字居中 */
+            text-decoration: none; /* 移除文字装饰 */
+            display: inline-block; /* 行内块元素 */
+            font-size: 16px; /* 字体大小 */
+            margin: 0 auto; /* 外边距 */
+            cursor: pointer; /* 鼠标悬停时显示手型 */
+            border-radius: 8px; /* 圆角边框 */
+            transition: background-color 0.3s ease; /* 背景颜色过渡效果 */
+}
+
+.beautiful-button:hover {
+            background-color: #45a049; /* 鼠标悬停时的背景颜色 */
+}
+
+.button-container {
+            text-align: center;
+            width: 100%;
+}
+

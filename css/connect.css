@@ -1,0 +1,37 @@
+.contact-card {
+            cursor: pointer;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            width: 200px;
+            transition: background-color 0.3s;
+        }
+
+        .contact-card:hover {
+            background-color: #dedede;
+        }
+
+        /* 定义微信号显示样式 */
+        .wechat-number {
+            margin-top: 10px;
+            font-size: 24px;
+            font-style: italic;
+            text-align: center;
+            display: none;
+        }
+
+
+        .number {
+            margin-top: 10px;
+            font-size: 24px;
+            font-style: italic;
+        }
+
+
+
+.no-underline{
+    text-decoration: none;
+    color:black;
+    font-size: 24px;
+    font-style: italic;
+}

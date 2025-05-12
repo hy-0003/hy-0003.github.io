@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <title>Ver0003's first html</title>
+</head>
+<body>
+    <ul>
+        <li><a class="active" href="#" onclick="loadPage(this,'home.html')">主页</a></li>
+        <li><a href="#" onclick="loadPage(this,'study.html')">学习成绩</a></li>
+        <li><a href="#" onclick="loadPage(this,'connect.html')">联系</a></li>
+    </ul>
+    <iframe id="contentFrame" src="home.html" allow="same-origin;alow-scripts"></iframe>
+    <script src="js/ori.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/connect.js"></script>
+</body>
+</html>
