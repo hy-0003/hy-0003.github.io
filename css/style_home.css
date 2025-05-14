@@ -95,7 +95,7 @@ a {color:#252526}
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 32px;
 }
 
 
@@ -124,11 +124,11 @@ a {color:#252526}
             background-color: #848484; /* 背景颜色 */
             border: none; /* 移除边框 */
             color: white; /* 文字颜色 */
-            padding: 15px 32px; /* 内边距 */
+            padding: 20px 40px; /* 内边距 */
             text-align: center; /* 文字居中 */
             text-decoration: none; /* 移除文字装饰 */
             display: inline-block; /* 行内块元素 */
-            font-size: 16px; /* 字体大小 */
+            font-size: 20px; /* 字体大小 */
             margin: 0 auto; /* 外边距 */
             cursor: pointer; /* 鼠标悬停时显示手型 */
             border-radius: 8px; /* 圆角边框 */
@@ -144,3 +144,98 @@ a {color:#252526}
             width: 100%;
 }
 
+
+
+.avatar-container {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.tag-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.tag {
+    position: absolute;
+    width: 100px; /* 增大泡泡尺寸 */
+    height: 100px; /* 增大泡泡尺寸 */
+    border-radius: 50%;
+    background-color: #b9b9b9; /* 更换为与黑白色调搭配的颜色 */
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px; /* 适当增大字体 */
+    animation: float 3s ease-in-out infinite;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* 为不同标签设置不同位置，使其距离头像更远 */
+.tag:nth-child(1) {
+    top: 0%;
+    left: -40%;
+}
+
+.tag:nth-child(2) {
+    top: 90%;
+    left: -30%;
+}
+
+.tag:nth-child(3) {
+    top: 30%;
+    right: -50%;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px); /* 增大悬浮动画的垂直位移 */
+    }
+}
+
+
+
+/* ... 已有代码 ... */
+.flowchart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* 步骤间间距 */
+}
+
+.flowchart-step {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* 圆圈和箭头间距 */
+}
+
+.step-circle {
+    padding: 20px 30px;
+    background-color: #666;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    border-radius: 8px;
+    font-style: italic;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.step-arrow {
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 25px solid #666; /* 箭头颜色 */
+}
+/* ... 已有代码 ... */

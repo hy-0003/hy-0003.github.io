@@ -1,0 +1,50 @@
+.content{
+    text-align: center;
+}
+
+p {color:#252526 ;font-size: 20px}
+h1 {color:#252526 ; text-align: center;}
+h2 {color:#252526}
+h3 {color:#252526}
+h4 {color:#252526}
+h5 {color:#252526}
+h6 {color:#252526}
+a {color:#252526}
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 15%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+li a {
+    display: block;
+    color: #555;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li a.active {
+    background-color: #555;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+
+.no-underline{
+    text-decoration: none;
+    color:black;
+    font-size: 24px;
+    font-style: italic;
+}

@@ -2,16 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/style_home.css">
+    <link href="css/style_home.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>主页</title>
 </head>
 <body>
     
     <h1><em>Ver0003的个人主页</em></h1>
     <hr class="horizontal-divider">
-    <img class="circular-image" src="my-image.jpg" alt="圆形图片">
+
+
+    <div class="avatar-container">
+        <img class="circular-image" src="my-image.jpg" alt="圆形图片">
+        <div class="tag-container">
+            <div class="tag">实操科研派</div>
+            <div class="tag">编程爱好者</div>
+            <div class="tag">“运动健将”</div>
+        </div>
+    </div>
     <br>
     <br>
+
+
     <div class="info-card">
         <div class="info-title">基本信息</div>
         <div class="info-row">
@@ -26,7 +38,7 @@
     <br>
     <br>
     <div class="info-study" onclick="navigateToStudy()">
-        <h2 style="font-style: italic;">学习成绩</h2>
+        <h2 style="font-style: italic;">学习成绩（国家基础学科拔尖学生培养计划）</h2>
         <div class="gpa-rank">
             <span class="label">GPA: &nbsp; 3.92</span>
             <span class="label">Rank: &nbsp; 5%</span>
@@ -45,7 +57,39 @@
                 <div class="info-item">抽象代数(88)</div>
             </div>
     </div>
+    
 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr class="horizontal-divider">
+    <br>
+    <br>
+    <br>
+    <!-- 流程图容器 -->
+    <div class="flowchart-container">
+        <div class="flowchart-step">
+            <div class="step-circle">我的主页</div>
+            <div class="step-arrow"></div>
+        </div>
+        <div class="flowchart-step">
+            <div class="step-circle">我的作品图集</div>
+            <div class="step-arrow"></div>
+        </div>
+        <div class="flowchart-step">
+            <div class="step-circle">我的项目</div>
+            <div class="step-arrow"></div>
+        </div>
+        <div class="flowchart-step">
+            <div class="step-circle">我的奖项与技能</div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
     <br>
     <br>
     <div class="button-container">

@@ -4,12 +4,43 @@
     <meta charset="UTF-8">
     <link href="css/project.css" rel="stylesheet" type="text/css">
     <link href="css/style_home.css" rel="stylesheet" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我的项目集</title>
 </head>
 <body>
     <h1><em>Ver0003的个人主页</em></h1>
     <hr class="horizontal-divider">
-    <h2><em>我的项目</em></h2>
+    <h1><em>我的项目</em></h1>
+
+
+    <h1 class="title">DL求解Fokker-Planck方程</h1>
+    <ul class="list">
+        <li>针对生物分子动力学中球面Fokker-Planck方程求解难题,自主设计基于深度BSDE方法的神经网络求解框架,开发了相应蒙特卡洛算法</li>
+        <li>通过完善算法、调整超参数,将模型损失函数稳定收敛至1e-02量级。取得突破性精度:绝对误差0.0014(相对误差5.7%)</li>
+        <li>为解决损失函数较大，不稳定以及数值计算问题,提出球面上BSDE方法,促使模型收敛速度加倍、损失函数趋于正常平缓</li>
+        <li>通过对比分析,验证了BSDE方法在求解Fokker-Planck方程中的有效性</li>
+        <li>预期一篇SCI二区及以上级别的学术论文以及在GitHUb开源完整算法实现与预模型训练</li>
+    </ul>
+    <div id="imageSection">
+        <div class="grid-row">
+            <img src="project_image/bsde1.png" alt="Image 1">
+        </div>
+        <div class="image-grid custom-grid">
+            <img src="project_image/bsde2.png" alt="Image 2">
+            <img src="project_image/bsde3.png" alt="Image 3">
+            <img src="project_image/bsde4.png" alt="Image 4">
+        </div>
+    </div>
+        <div class="grid-row">
+            <img src="project_image/bsde5.png" alt="Image 5">
+            <img src="project_image/bsde6.png" alt="Image 6">
+        </div>
+    </div>
+    <br>
+    <br>
+    <hr class="horizontal-divider">
+
+
     <h1 class="title">大语言模型DeepTA</h1>
     <ul class="list">
         <li>针对大学数学助教工作压力大效率低问题,兰州大学选拔团队启动DeepTA大语言模型研发项目,旨在实现数学问题自动答疑、作业批改与知识点解析</li>
@@ -17,29 +48,8 @@
         <li>项目正在稳步推进</li>
     </ul>
     <div id="imageSection">
-        <div class="image-grid">
-            <div class="grid-row">
-                <img src="deepta1.png" alt="Image 1">
-            </div>
-        </div>
-    </div>
-    <br>
-    <br>
-    <hr class="horizontal-divider">
-    
-
-
-    <h1 class="title">DL求解Fokker-Planck方程</h1>
-    <ul class="list">
-        <li>针对生物分子动力学中球面Fokker-Planck方程求解难题,自主研发设计基于深度BSDE方法的神经网络求解框架,开发相应蒙特卡洛算法</li>
-        <li>主导实现CUDA加速,通过完善算法、调整超参数,将模型损失函数稳定收敛至1e-02量级。取得突破性精度:绝对误差0.0014(相对误差5.7%)</li>
-        <li>预期一篇SCI二区及以上级别的学术论文以及在GitHUb开源完整算法实现与预模型训练</li>
-    </ul>
-    <div id="imageSection">
-        <div class="image-grid">
-            <div class="grid-row">
-                <img src="deepta1.png" alt="Image 1">
-            </div>
+        <div class="grid-row">
+            <img src="project_image/deepta1.png" alt="Image 1">
         </div>
     </div>
     <br>
@@ -63,6 +73,16 @@
     <br>
     <br>
     <hr class="horizontal-divider">
+
+    
+    <br>
+    <br>
+    
+    <div class="button-container">
+        <button class="beautiful-button" onclick="location.href='award.html'">我的奖项与技能</button>
+    </div>
+    <script src="js/ori.js"></script>
+    <script src="js/home.js"></script>
 
     
 </body>
