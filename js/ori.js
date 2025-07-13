@@ -40,7 +40,7 @@ container.style.display = 'block';
     
     // 延迟加载iframe内容
 setTimeout(() => {
-    frame.src = "https://udify.app/chatbot/u2L0lp8jzWrWt1mF"
+    frame.src = "https://udify.app/chatbot/U2izsBESudoCe8vu"
       
       // 平滑滚动到聊天窗口
     container.scrollIntoView({behavior: 'smooth'});
