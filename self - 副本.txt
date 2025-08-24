@@ -1,0 +1,17 @@
+Hello XXX,
+
+I'm Yi He, majoring in mathematics at Lanzhou University, which is a 985 institution.
+
+I'm very interested in LLM (Large Language Models) and intelligent agents.
+
+I've worked on many projects, among which three explicitly involve data processing: a SARS transmission model, the national competition's ash deposition index, and Yolov5 target detection. I believe that high-quality data is the prerequisite for deep learning. Other projects cover areas such as deep learning, numerical computation, model construction, and solving PDEs (Partial Differential Equations) using deep learning.
+
+My total code amount is approximately 20,000 to 30,000 lines, with 60% in Python, 35% in C and C++. I've only learned the basics of C++, and the most representative work is a vector I wrote that can perform various mathematical operations. The remaining 5% consists of front-end languages. My code quality is at least very high within the school; I have the habit of writing appropriate comments and my indentation is quite neat.
+
+I'm proficient in procedural, object-oriented, and functional programming, with a better command of functional programming. Perhaps because I study functions every day as a mathematics student, I really feel得心应手 with it.
+
+Currently, I use VS Code as my IDE. I'm skilled in basic operations such as pulling, uploading, and copying on GitHub, configuring environments with Conda, and using SSH in VS Code to connect to instances for running code.
+
+I've used Docker relatively little, but I have built several images and containers.
+
+In fact, I think my core strengths are quick learning ability and strong pressure resistance.
