@@ -1,0 +1,246 @@
+body {
+    background-color: #f8f9fa;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p {color:#252526}
+h1 {color:#252526; text-align: center;}
+h2 {color:#252526}
+h3 {color:#252526}
+h4 {color:#252526}
+h5 {color:#252526}
+h6 {color:#252526}
+a {color:#252526}
+
+/* 导航栏样式 - 纯白色背景 */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 20px 0;
+    width: 15%;
+    background: rgb(255, 255, 255); /* 纯白色背景 */
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.05); /* 添加轻微阴影增加层次感 */
+}
+
+/* 鼠标悬停时保持白色背景 */
+ul:hover {
+    background: rgb(255, 255, 255); 
+}
+
+li {
+    margin: 8px 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+li a {
+    display: block;
+    color: #2c3e50; /* 深色文字确保可见性 */
+    padding: 15px 20px; /* 增加内边距使字体看起来更大 */
+    text-decoration: none;
+    font-size: 16px; /* 增大字体大小 */
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+    background: rgba(255, 255, 255, 0.9); /* 白色背景 */
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* 移除伪元素点 */
+li a::before {
+    content: ""; /* 移除点 */
+    margin-right: 0; /* 移除右边距 */
+}
+
+/* 鼠标悬停时菜单项效果 */
+li a:hover:not(.active) {
+    background-color: rgba(240, 240, 240, 0.9);
+    color: #3498db;
+    border-left: 3px solid #3498db;
+    transform: translateX(5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+li a.active {
+    background: rgba(52, 152, 219, 0.8);
+    color: white;
+    border-left: 3px solid #ffffff;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+/* 调整iframe位置，增加与导航栏的空隙 */
+iframe {
+    position: absolute;
+    right: 0;
+    left: 16%; /* 增加左边距，创建空隙 */
+    width: 83%; /* 相应减少宽度 */
+    height: 100%;
+    flex: 1;
+    border: none;
+    background-color: #ffffff;
+    margin-left: 10px; /* 额外增加左边距 */
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    ul {
+        width: 60px;
+    }
+    
+    iframe {
+        left: 70px; /* 移动端也增加空隙 */
+        width: calc(100% - 70px);
+    }
+    
+    li a {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+}
+
+html {
+    background-color: #ffffff;
+}
+
+body {
+    color: #ffffff;
+    background-color: #ffffff;
+}
+
+#layout-menu {
+    background: #f6f6f6;
+}
+
+#layout-menu td {
+    background: #f4f4f4;
+}
+
+tt {
+    background: #ffffdd;
+}
+
+a, a > tt {
+    color: #224b8d;
+}
+
+a:hover {
+    border-bottom: 1px gray dotted;
+}
+
+#layout-menu a.current:link, #layout-menu a.current:visited {
+    color: #022b6d;
+    border-bottom: 1px gray solid;
+}
+
+#layout-menu a:link, #layout-menu a:visited, #layout-menu a:hover {
+    color: #527bbd;
+}
+
+div.menu-category {
+    border-bottom: 1px solid gray;
+}
+
+div#toptitle {
+    border-bottom: 3px double gray;
+}
+
+div#subtitle {
+    color: #000;
+}
+
+em {
+    font-style: italic;
+}
+
+strong {
+    font-weight: bold;
+}
+
+h1, h2, h3 {
+    color: #527bbd;
+    border-bottom: 1px solid #aaaaaa;
+}
+
+h3 {
+    border-bottom: none;
+}
+
+div#footer {
+    color: #CD4F39;
+    border-top: 1px solid #c0c0c0;
+}
+
+div#footer a {
+    color: #80a0b0;
+}
+
+dd {
+    color: #222222;
+}
+
+div.codeblock > div.blockcontent {
+    background: #f6f6f6;
+}
+
+div.infoblock > div.blockcontent {
+    background: #ffffee;
+}
+
+div.blocktitle {
+    color: #cd7b62;
+}
+
+div.blockcontent {
+    border: 1px solid silver;
+}
+
+span.pycommand {
+    color: #000070;
+}
+
+span.statement {
+    color: #008800;
+}
+
+span.builtin {
+    color: #000088;
+}
+
+span.special {
+    color: #990000;
+}
+
+span.operator {
+    color: #880000;
+}
+
+span.error {
+    color: #aa0000;
+}
+
+span.comment, span.comment > *, span.string, span.string > * {
+    color: #606060;
+}
+
+table {
+    border: 2px solid black;
+}
+
+td {
+    border: 1px solid gray;
+}
+
+tr.heading {
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
