@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link href="research.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>科研经历</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>科研经历</h1>
+        </header>
+
+        <!-- DL求解Fokker-Planck方程 -->
+        <div class="project-section">
+            <h1 class="title">DL求解Fokker-Planck方程</h1>
+            
+            <div class="tech-tags">
+                <div class="tech-tag">深度学习</div>
+                <div class="tech-tag">数值计算</div>
+                <div class="tech-tag">BSDE方法</div>
+            </div>
+            
+            <ul class="list">
+                <li>针对生物分子动力学中球面Fokker-Planck方程求解难题，自主设计基于深度BSDE方法的神经网络求解框架，开发了相应蒙特卡洛算法</li>
+                <li>通过完善算法、调整超参数，将模型损失函数稳定收敛至1e-02量级。取得突破性精度：绝对误差0.0014(相对误差5.7%)</li>
+                <li>为解决损失函数较大、不稳定问题，提出球面上BSDE方法，促使模型收敛速度加倍、损失函数趋于正常平缓</li>
+                <li>通过对比分析，验证了BSDE方法在求解Fokker-Planck方程中的有效性</li>
+            </ul>
+            
+            <div class="project-highlight">
+                <strong>预期成果：</strong> SCI二区及以上级别的学术论文，GitHub开源完整算法实现与预训练模型
+            </div>
+            
+            <div class="project-impact">
+                <div class="impact-card">
+                    <h3>理论推导</h3>
+                    <p>推导球面Fokker-PLanck，提出球面Deep BSDE方法</p>
+                </div>
+                <div class="impact-card">
+                    <h3>算法实现</h3>
+                    <p>自主设计相应神经网络，实现蒙特卡洛算法</p>
+                </div>
+                <div class="impact-card">
+                    <h3>对比分析</h3>
+                    <p>对比Deep BSDE方法与传统蒙特卡洛算法，验证有效性</p>
+                </div>
+            </div>
+
+            <!-- 新的图片布局实现 -->
+            <div class="image-basket">
+                <div class="image-basket-title">项目成果展示</div>
+                <div class="image-grid">
+                    <div class="grid-row">
+                        <div class="image-item">
+                            <img src="project_image/bsde1.png" alt="收敛曲线">
+                            <div class="image-caption">损失函数收敛曲线</div>
+                        </div>
+                    </div>
+                    <div class="grid-row">
+                        <div class="image-item">
+                            <img src="project_image/bsde2.png" alt="收敛曲线">
+                            <div class="image-caption">损失函数收敛曲线</div>
+                        </div>
+                        <div class="image-item">
+                            <img src="project_image/bsde3.png" alt="原始分析">
+                            <div class="image-caption">BSDE原始分析</div>
+                        </div>
+                        <div class="image-item">
+                            <img src="project_image/bsde4.png" alt="新型算法">
+                            <div class="image-caption">新型算法提出</div>
+                        </div>
+                    </div>
+                    <div class="grid-row">
+                        <div class="image-item">
+                            <img src="project_image/bsde5.png" alt="Code">
+                            <div class="image-caption">自主搭建DL</div>
+                        </div>
+                        <div class="image-item">
+                            <img src="project_image/bsde6.png" alt="Latex">
+                            <div class="image-caption">Latex渲染</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 大语言模型DeepTA -->
+        <div class="project-section">
+            <h1 class="title">大语言模型DeepTA</h1>
+            
+            <div class="tech-tags">
+                <div class="tech-tag">自然语言处理</div>
+                <div class="tech-tag">教育科技</div>
+                <div class="tech-tag">微调技术</div>
+            </div>
+            
+            <ul class="list">
+                <li>针对大学数学助教工作压力大效率低问题，兰州大学选拔团队启动DeepTA大语言模型研发项目，旨在实现数学问题自动答疑、作业批改与知识点解析</li>
+                <li>搭建Docker微服务架构、构建学科语料库与分词系统、参与模型微调全流程、清洗大学数学语料、利用LoRA微调，参与设计数学逻辑链强化训练策略</li>
+                <li>项目正在稳步推进</li>
+            </ul>
+            
+            <div class="project-impact">
+                <div class="impact-card">
+                    <h3>技术架构</h3>
+                    <p>基于Docker的微服务架构，支持弹性扩展和高可用性</p>
+                </div>
+                <div class="impact-card">
+                    <h3>数据处理</h3>
+                    <p>清洗并构建了超过50万条大学数学语料库</p>
+                </div>
+                <div class="impact-card">
+                    <h3>模型优化</h3>
+                    <p>采用LoRA微调技术提升模型效率</p>
+                </div>
+            </div>
+            
+            <div class="image-basket">
+                <div class="image-basket-title">系统架构与界面</div>
+                <div class="image-grid">
+                    <div class="grid-row">
+                        <div class="image-item">
+                            <img src="project_image/deepta1.png" alt="系统架构">
+                            <div class="image-caption">DeepTA系统架构图</div>
+                        </div>
+                    </div>
+                    <div class="grid-row">
+                        <div class="image-item">
+                            <img src="project_image/deepta2.png" alt="用户界面">
+                            <div class="image-caption">用户交互界面</div>
+                        </div>
+                        <div class="image-item">
+                            <img src="project_image/deepta3.png" alt="工作流程">
+                            <div class="image-caption">问题处理流程</div>
+                        </div>
+                        <div class="image-item">
+                            <img src="project_image/deepta4.png" alt="结果展示">
+                            <div class="image-caption">数学解答效果</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- iDNA模型预测基因甲基化 -->
+        <div class="project-section">
+            <h1 class="title">iDNA模型预测基因甲基化</h1>
+            
+            <div class="tech-tags">
+                <div class="tech-tag">基因甲基化预测</div>
+                <div class="tech-tag">FiLM+MoE</div>
+                <div class="tech-tag">DNABERT</div>
+                <div class="tech-tag">LoRA微调</div>
+                <div class="tech-tag">可解释性分析</div>
+                <div class="tech-tag">生物信息学</div>
+            </div>
+            
+            <ul class="list">
+                <li>在17个标准数据集上进行基因甲基化预测，自主设计预测模型，实现代码，效果超越SOTA</li>
+                <li>创新性引入DNABERT2模型，对DNABERT2与DNABERT-6mer进行LoRA微调，组成双特征框架</li>
+                <li>首次构建FiLM+MoE的Fusion模型，实现特征动态调整，结合轻量Transformer专家与门控机制完成高效特征融合</li>
+                <li>进行多方面可视化与可解释性分析，增强结果的生物学可信度</li>
+                <li>在超越SOTA的同时，将模型参数压缩至SOTA的一半以下，实现高效训练</li>
+            </ul>
+            
+            <div class="project-highlight">
+                <strong>预期成果：</strong> SCI二区及以上级别的学术论文，GitHub开源完整算法实现与预训练模型
+            </div>
+            
+            <div class="project-impact">
+                <div class="impact-card">
+                    <h3>性能提升</h3>
+                    <p>在17个标准数据集上效果超越SOTA模型</p>
+                </div>
+                <div class="impact-card">
+                    <h3>模型压缩</h3>
+                    <p>模型参数压缩至SOTA的一半以下</p>
+                </div>
+                <div class="impact-card">
+                    <h3>创新架构</h3>
+                    <p>首次构建FiLM+MoE的Fusion模型</p>
+                </div>
+            </div>
+            
+            <div class="image-basket">
+                <div class="image-basket-title">项目成果展示</div>
+                <div class="image-grid">
+                    <div class="grid-row">
+                        <div class="image-item">
+                            <img src="project_image/idna1.png" alt="模型架构">
+                            <div class="image-caption">FiLM+MoE融合架构</div>
+                        </div>
+                    </div>
+                    <div class="grid-row">
+                        <div class="image-item">
+                            <img src="project_image/idna2.png" alt="比较结果">
+                            <div class="image-caption">与其他模型性能对比</div>
+                        </div>
+                        <div class="image-item">
+                            <img src="project_image/idna3.png" alt="特征分析">
+                            <div class="image-caption">特征可视化分析</div>
+                        </div>
+                        <div class="image-item">
+                            <img src="project_image/idna4.png" alt="性能曲线">
+                            <div class="image-caption">训练性能曲线</div>
+                        </div>
+                    </div>
+                    <div class="grid-row">
+                        <div class="image-item">
+                            <img src="project_image/idna5.png" alt="可解释性">
+                            <div class="image-caption">生物可解释性分析</div>
+                        </div>
+                        <div class="image-item">
+                            <img src="project_image/idna6.png" alt="应用前景">
+                            <div class="image-caption">潜在临床应用方向</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-section">
+            <h1 class="title">工业零件表征组装</h1>
+            
+            <div class="tech-tags">
+                <div class="tech-tag">对比学习</div>
+                <div class="tech-tag">点云</div>
+                <div class="tech-tag">REQNN</div>
+                <div class="tech-tag">表示学习</div>
+            </div>
+            
+            <ul class="list">
+                <li>深入调研点云级别对比学习领域，完成多篇论文的阅读与讲解</li>
+                <li>设计编码器，引入对比学习学习零件表征</li>
+                <li>采用三维点云旋转等变性的四元数神经网络，以提高模型表征能力</li>
+                <li>为了符合物理实际以及期望，将神经网络修改为对应的REQNN</li>
+            </ul>
+            
+            <div class="project-highlight">
+                <strong>核心贡献：</strong> 提议REQNN神经网络并负责提供底层操作实现代码
+            </div>
+            
+            <div class="project-impact">
+                <div class="impact-card">
+                    <h3>前沿总结</h3>
+                    </h3>
+                    <p>大量搜寻项目相关论文，阅读并讲解</p>
+                </div>
+                <div class="impact-card">
+                    <h3>提议REQNN</h3>
+                    <p>修改神经网络底层计算方法，使得满足旋转等价性</p>
+                </div>
+                <div class="impact-card">
+                    <h3>代码先锋</h3>
+                    <p>搜寻相关开源代码，配置环境并理解代码</p>
+                </div>
+            </div>
+            
+            <div class="image-basket">
+                <div class="image-basket-title">项目成果展示</div>
+                <div class="image-grid">
+                    <div class="grid-row">
+                        <div class="image-item">
+                            <img src="project_image/idna1.png" alt="模型架构">
+                            <div class="image-caption">FiLM+MoE融合架构</div>
+                        </div>
+                    </div>
+                    <div class="grid-row">
+                        <div class="image-item">
+                            <img src="project_image/idna2.png" alt="比较结果">
+                            <div class="image-caption">与其他模型性能对比</div>
+                        </div>
+                        <div class="image-item">
+                            <img src="project_image/idna3.png" alt="特征分析">
+                            <div class="image-caption">特征可视化分析</div>
+                        </div>
+                        <div class="image-item">
+                            <img src="project_image/idna4.png" alt="性能曲线">
+                            <div class="image-caption">训练性能曲线</div>
+                        </div>
+                    </div>
+                    <div class="grid-row">
+                        <div class="image-item">
+                            <img src="project_image/idna5.png" alt="可解释性">
+                            <div class="image-caption">生物可解释性分析</div>
+                        </div>
+                        <div class="image-item">
+                            <img src="project_image/idna6.png" alt="应用前景">
+                            <div class="image-caption">潜在临床应用方向</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+</html>
