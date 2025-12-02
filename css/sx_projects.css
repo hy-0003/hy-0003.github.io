@@ -1,0 +1,219 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #2a4365, #4a6789);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #2a4365;
+            position: relative;
+        }
+        
+        header h1 {
+            font-size: 2.8rem;
+            color: #1a2a6c;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            letter-spacing: 1px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        header h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #1a2a6c, #4a6789);
+            border-radius: 2px;
+        }
+        
+        .internship-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .internship-card {
+            flex: 1 1 45%;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #e0e6ed;
+            min-width: 300px;
+        }
+        
+        .internship-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #eef2f7;
+        }
+        
+        .company {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1a2a6c;
+        }
+        
+        .date {
+            background: linear-gradient(135deg, #4a6789, #2a4365);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .position {
+            font-size: 1.2rem;
+            color: #2a4365;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .responsibilities {
+            margin-top: 20px;
+        }
+        
+        .responsibilities h3 {
+            color: #1a2a6c;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .responsibilities h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            background: #2a4365;
+            border-radius: 50%;
+        }
+        
+        .responsibilities ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        
+        .responsibilities li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .responsibilities li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #4a6789;
+            font-weight: bold;
+        }
+        
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px dashed #e0e6ed;
+        }
+        
+        .tech-tag {
+            background: linear-gradient(135deg, #eef2f7, #dbe6f6);
+            color: #1a2a6c;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+        
+        .detail-link {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: linear-gradient(135deg, rgba(26, 42, 108, 0.1), rgba(42, 67, 101, 0.1));
+            border-radius: 12px;
+            font-size: 1.2rem;
+        }
+        
+        .detail-link a {
+            color: #1a2a6c;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 30px;
+            background: linear-gradient(135deg, rgba(26, 42, 108, 0.1), rgba(42, 67, 101, 0.1));
+        }
+        
+        .detail-link a:hover {
+            background: linear-gradient(135deg, #1a2a6c, #2a4365);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2.5rem;
+            color: rgba(26, 42, 108, 0.1);
+            z-index: 0;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .internship-card {
+                flex: 1 1 100%;
+            }
+            
+            header h1 {
+                font-size: 2.2rem;
+            }
+        }

@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #fafcff;
+    font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+    padding: 20px;
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+
+header {
+    text-align: center;
+    margin: 20px 0 40px;
+    position: relative;
+}
+
+header h1 {
+    font-size: 3.2rem;
+    color: #1e3a8a;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+
+h1 {
+    color: #000000; /* 更柔和的蓝色 */
+    text-align: center;
+    margin: 30px 0 20px;
+    font-size: 2.5rem;
+    position: relative;
+    padding-bottom: 15px;
+    font-weight: 600;
+}
+
+h1.title {
+    font-size: 2.2rem;
+    padding-bottom: 15px;
+    margin: 40px 0 20px;
+    color: #000000; /* 淡蓝色 */
+    text-shadow: 0 1px 2px rgba(30, 58, 138, 0.05);
+}
+
+.list {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0 0 30px;
+    padding: 0 20px;
+    list-style-type: none;
+}
+
+li {
+    margin: 15px 0;
+    padding-left: 15px;
+    border-left: 3px solid #a0c4ff; /* 淡蓝色边框 */
+    position: relative;
+}
+
+.image-basket {
+    background: #f5f9ff; /* 更淡的蓝色背景 */
+    border-radius: 16px;
+    padding: 25px;
+    margin: 30px 0;
+    box-shadow: 
+        0 5px 15px rgba(30, 58, 138, 0.05),
+        inset 0 0 10px rgba(191, 219, 254, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.image-basket::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #a0c4ff, #b6ccfe, #a0c4ff); /* 淡蓝色渐变 */
+}
+
+.image-basket-title {
+    text-align: center;
+    font-size: 1.4rem;
+    color: #5a8bc6; /* 淡蓝色 */
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+
+.image-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.grid-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.image-item {
+    flex: 1 1 300px;
+    max-width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+    background: white;
+}
+
+.image-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(30, 58, 138, 0.08);
+    z-index: 2;
+}
+
+.image-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.image-item:hover img {
+    transform: scale(1.05);
+}
+
+.image-caption {
+    padding: 15px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+    color: #5a6c82;
+    font-style: italic;
+}
+
+.button-container {
+    text-align: center;
+    width: 100%;
+    margin: 40px 0 30px;
+}
+
+.beautiful-button {
+    background: linear-gradient(135deg, #7ba9e0, #5a8bc6); /* 淡蓝色渐变 */
+    border: none;
+    color: white;
+    padding: 16px 45px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 auto;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(123, 169, 224, 0.3);
+    letter-spacing: 1px;
+}
+
+.beautiful-button:hover {
+    background: linear-gradient(135deg, #5a8bc6, #4a7ab8);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(90, 139, 198, 0.4);
+}
+
+.tech-tag {
+    display: inline-block;
+    background: linear-gradient(135deg, #a0c4ff, #7ba9e0); /* 淡蓝色渐变 */
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0 5px 10px 0;
+    box-shadow: 0 2px 5px rgba(160, 196, 255, 0.3);
+}
+
+.project-section {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    margin: 0 auto 50px;
+    box-shadow: 0 10px 30px rgba(30, 58, 138, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(30, 58, 138, 0.08);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h1.title {
+        font-size: 1.8rem;
+    }
+    
+    .list {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+    
+    .image-basket {
+        padding: 15px;
+    }
+    
+    .image-item {
+        flex: 1 1 100%;
+    }
+    
+    .beautiful-button {
+        padding: 14px 35px;
+        font-size: 1.1rem;
+    }
+}

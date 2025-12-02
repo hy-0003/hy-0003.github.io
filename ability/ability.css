@@ -1,0 +1,382 @@
+/* =========================================
+   1. 基础重置 (Base Reset)
+   作用：清除浏览器默认的边距和内边距，确保在不同浏览器显示一致
+   ========================================= */
+* {
+    /* 核心设置：让padding和border包含在宽度内，防止布局撑破 */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================================
+   2. 全局样式 (Global Styles)
+   作用：定义整个页面的背景、字体、行高等基础风格
+   ========================================= */
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* 防止水平滚动条出现 */
+    
+    /* 背景颜色：这里整合了两个文件的选择 */
+    background-color: #fafcff; /* 方案A：淡蓝色背景 (来自project.css) */
+    /* background: white; */   /* 方案B：纯白背景 (来自ability.css)，若喜欢纯白可取消注释 */
+
+    /* 字体栈：优先使用 Segoe UI，没有则用微软雅黑 */
+    font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+    color: #2c3e50; /* 通用文字颜色：深灰蓝 */
+    line-height: 1.6; /* 行高：提升阅读体验 */
+    padding-bottom: 20px;
+}
+
+/* =========================================
+   3. 布局容器 (Layout Container)
+   作用：限制内容的最大宽度，并使其水平居中
+   ========================================= */
+.container {
+    max-width: 1300px; /* 内容最大宽度 */
+    margin: 0 auto;    /* 上下0，左右自动 -> 实现水平居中 */
+    padding: 0 15px;   /* 两侧留出一点缝隙，防止贴边 */
+}
+
+/* =========================================
+   4. 头部与排版 (Header & Typography)
+   作用：定义标题的样式、阴影和对齐方式
+   ========================================= */
+header {
+    text-align: center;
+    margin: 20px 0 40px;
+    position: relative;
+}
+
+header h1 {
+    font-size: 3.2rem;
+    color: #1e3a8a; /* 深蓝色 */
+    letter-spacing: 1px; /* 字间距 */
+    /* 文字阴影：水平偏移 垂直偏移 模糊半径 颜色 */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 15px;
+}
+
+/* 通用 H1 样式 */
+h1 {
+    text-align: center;
+    font-weight: 600;
+    position: relative;
+}
+
+/* 特殊样式的 H1 (用于项目页面的副标题) */
+h1.title {
+    font-size: 2.2rem;
+    margin: 40px 0 20px;
+    color: #000000;
+    text-shadow: 0 1px 2px rgba(30, 58, 138, 0.05);
+}
+
+/* 分隔线组件 (来自 ability.css) */
+.section-divider {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #3b82f6, transparent); /* 两头透明，中间蓝 */
+    margin: 60px auto;
+    width: 80%;
+    max-width: 600px;
+}
+
+/* 带下划线装饰的标题 (来自 ability.css) */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #1d4ed8;
+    margin: 40px 0 30px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+/* 使用伪元素 ::after 制作标题下方的短横线 */
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); /* 精确居中 */
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+    border-radius: 2px;
+}
+
+/* =========================================
+   5. 通用组件：卡片 (Cards & Sections)
+   作用：整合了 project 和 ability 中的卡片样式
+   ========================================= */
+
+/* 基础卡片容器 (用于 Project) */
+.project-section {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    margin: 0 auto 50px;
+    /* 阴影效果：让卡片有浮起的感觉 */
+    box-shadow: 0 10px 30px rgba(30, 58, 138, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 动画过渡 */
+}
+
+.project-section:hover {
+    transform: translateY(-3px); /* 鼠标悬停时上浮 */
+    box-shadow: 0 15px 40px rgba(30, 58, 138, 0.08);
+}
+
+/* 图片篮子样式 (Project 特有) */
+.image-basket {
+    background: #f5f9ff;
+    border-radius: 16px;
+    padding: 25px;
+    margin: 30px 0;
+    box-shadow: 0 5px 15px rgba(30, 58, 138, 0.05);
+    position: relative;
+    overflow: hidden; /* 隐藏溢出的内容 */
+}
+
+/* 顶部装饰条 */
+.image-basket::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #a0c4ff, #b6ccfe, #a0c4ff);
+}
+
+.image-basket-title {
+    text-align: center;
+    font-size: 1.4rem;
+    color: #5a8bc6;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* =========================================
+   6. 网格布局系统 (Grid Layouts)
+   作用：用于排列技能卡片或图片
+   ========================================= */
+
+/* 技能和奖项容器 (Grid 布局) */
+.skills-container, .awards-container {
+    display: grid;
+    /* 响应式黑魔法：自动填充，每列最小300px，最大1fr(平分剩余空间) */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; /* 网格间距 */
+    margin-bottom: 50px;
+}
+
+/* 技能/奖项 单个卡片 */
+.skill-card, .award-card {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    display: flex;       /* 弹性布局 */
+    flex-direction: column; /* 垂直排列内容 */
+    height: 100%;        /* 撑满高度 */
+}
+
+.skill-card:hover, .award-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.skill-title, .award-title {
+    font-size: 1.6rem;
+    color: #1e40af;
+    margin-bottom: 15px;
+    border-bottom: 2px dashed #dbeafe; /* 虚线分割 */
+}
+
+.skill-description, .award-description {
+    font-size: 1.1rem;
+    color: #4b5563;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+/* 修改b标签为简单黑色加粗 */
+.skill-description b, .award-description b {
+    color: #000; /* 改为黑色 */
+    font-weight: bold; /* 简单加粗 */
+    background: none; /* 移除背景 */
+    padding: 0; /* 移除内边距 */
+    border-radius: 0; /* 移除圆角 */
+}
+
+.skill-image, .award-image {
+    width: 100%;
+    height: 200px;
+    object-fit: contain; /* 保持图片比例，不裁剪 */
+    border-radius: 8px;
+    margin: 15px 0;
+    border: 1px solid #dbeafe;
+    background: #f8fafc;
+    padding: 10px;
+}
+
+.skill-date, .award-date {
+    text-align: right;
+    font-size: 1rem;
+    color: #6b7280;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* 图片网格 (Project 特有) */
+.image-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.grid-row {
+    display: flex;
+    flex-wrap: wrap; /* 允许换行 */
+    justify-content: center;
+    gap: 20px;
+}
+
+.image-item {
+    flex: 1 1 300px; /* 弹性增长，弹性收缩，基础宽度300px */
+    max-width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.image-item:hover {
+    transform: translateY(-5px);
+    z-index: 2;
+}
+
+.image-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover; /* 填满容器，可能会裁切 */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.image-item:hover img {
+    transform: scale(1.05); /* 图片放大效果 */
+}
+
+.image-caption {
+    padding: 15px;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #5a6c82;
+    font-style: italic;
+}
+
+/* =========================================
+   7. 列表与标签 (Lists & Tags)
+   ========================================= */
+.list {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0 0 30px;
+    padding: 0 20px;
+    list-style-type: none; /* 去掉默认的小圆点 */
+}
+
+/* 自定义列表项样式 */
+li {
+    margin: 15px 0;
+    padding-left: 15px;
+    border-left: 3px solid #a0c4ff; /* 左侧蓝色竖线 */
+}
+
+/* 技术标签 (Project 特有) */
+.tech-tag {
+    display: inline-block;
+    background: linear-gradient(135deg, #a0c4ff, #7ba9e0);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px; /* 胶囊形状 */
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0 5px 10px 0;
+    box-shadow: 0 2px 5px rgba(160, 196, 255, 0.3);
+}
+
+/* =========================================
+   8. 按钮样式 (Buttons)
+   作用：统一了按钮风格，提供默认和深色两种变体
+   ========================================= */
+.button-container {
+    text-align: center;
+    width: 100%;
+    margin: 40px 0 30px;
+}
+
+.beautiful-button {
+    /* 默认浅蓝色渐变 (Project风格) */
+    background: linear-gradient(135deg, #7ba9e0, #5a8bc6); 
+    border: none;
+    color: white;
+    padding: 16px 45px;
+    text-align: center;
+    text-decoration: none; /* 去掉下划线 */
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 auto;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(123, 169, 224, 0.3);
+    letter-spacing: 1px;
+}
+
+.beautiful-button:hover {
+    background: linear-gradient(135deg, #5a8bc6, #4a7ab8);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(90, 139, 198, 0.4);
+}
+
+/* 如果你想用 ability.css 那个深蓝色的按钮，可以给按钮加 class="beautiful-button dark" */
+.beautiful-button.dark {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+}
+.beautiful-button.dark:hover {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+}
+
+/* =========================================
+   9. 响应式适配 (Media Queries)
+   作用：当屏幕宽度小于 768px (手机/平板) 时生效的样式
+   ========================================= */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    h1, header h1 {
+        font-size: 2rem; /* 减小标题字号 */
+    }
+    
+    .list, .skill-description, .award-description {
+        font-size: 1rem;
+    }
+    
+    .image-item {
+        flex: 1 1 100%; /* 图片在手机上占满一行 */
+    }
+    
+    .beautiful-button {
+        padding: 14px 35px;
+        font-size: 1.1rem;
+    }
+    
+    /* 强制单列显示 */
+    .skills-container, .awards-container {
+        grid-template-columns: 1fr;
+    }
+}
