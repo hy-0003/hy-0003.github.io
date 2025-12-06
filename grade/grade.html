@@ -1,70 +1,70 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="grade.css" type="text/css" />
-    <title>成绩单 - 贺毅</title>
+    <title>Transcript - Yi He</title>
 </head>
 <body>
     <div id="layout-content">
         <div class="grade-header">
-            <h1>学习成绩单</h1>
+            <h1>Academic Transcript</h1>
             <p class="header-subtitle">
-                兰州大学数学与统计学院 | 数学与应用数学专业 | 国家基础学科拔尖学生培养计划
+                School of Mathematics and Statistics, Lanzhou University | Mathematics and Applied Mathematics | National Fundamental Discipline Top Student Training Program
             </p>
         </div>
 
-        <!-- 绩点概览 -->
+        <!-- GPA Overview -->
         <div class="gpa-indicator">
             <div class="gpa-value">4.02</div>
-            <div class="gpa-label">必修+限选课程 GPA</div>
+            <div class="gpa-label">Required + Restricted Elective Courses GPA</div>
             
             <div class="gpa-scale">
                 <div class="scale-item">
                     <div class="scale-value">4.02 / 5.0</div>
-                    <div class="scale-label">必修+限选</div>
+                    <div class="scale-label">Required + Restricted Elective</div>
                 </div>
                 <div class="scale-item">
                     <div class="scale-value">3.98 / 5.0</div>
-                    <div class="scale-label">全部课程</div>
+                    <div class="scale-label">All Courses</div>
                 </div>
                 <div class="scale-item">
                     <div class="scale-value">Top 5%</div>
-                    <div class="scale-label">专业排名</div>
+                    <div class="scale-label">Major Ranking</div>
                 </div>
             </div>
         </div>
 
-        <!-- 关键数据概览 -->
+        <!-- Key Data Overview -->
         <div class="grade-overview">
             <div class="overview-card">
                 <div class="stat-value">126.2</div>
-                <div class="stat-label">已获总学分</div>
+                <div class="stat-label">Total Credits Earned</div>
             </div>
             
             <div class="overview-card">
                 <div class="stat-value">147</div>
-                <div class="stat-label">应修总学分</div>
+                <div class="stat-label">Total Required Credits</div>
             </div>
             
             <div class="overview-card">
                 <div class="stat-value">90.2</div>
-                <div class="stat-label">平均必修限选学分</div>
+                <div class="stat-label">Avg. Grade of Required & Restricted Elective</div>
             </div>
             
             <div class="overview-card">
                 <div class="stat-value">89.84</div>
-                <div class="stat-label">全部课程平均学分</div>
+                <div class="stat-label">Avg. Grade of All Courses</div>
             </div>
         </div>
 
-        <!-- 课程分类统计 -->
+        <!-- Course Category Statistics -->
         <div class="course-stats">
             <div class="course-stat-card">
                 <div class="course-stat-value">80.6</div>
-                <div class="course-stat-label">已获必修课学分</div>
+                <div class="course-stat-label">Credits Earned for Required Courses</div>
                 <div class="course-progress">
                     <div class="course-progress-bar" style="--progress-width: 85%;"></div>
                 </div>
@@ -72,7 +72,7 @@
             
             <div class="course-stat-card">
                 <div class="course-stat-value">21</div>
-                <div class="course-stat-label">已获限选课学分</div>
+                <div class="course-stat-label">Credits Earned for Restricted Electives</div>
                 <div class="course-progress">
                     <div class="course-progress-bar" style="--progress-width: 95%;"></div>
                 </div>
@@ -80,43 +80,43 @@
             
             <div class="course-stat-card">
                 <div class="course-stat-value">24.6</div>
-                <div class="course-stat-label">已获任选课学分</div>
+                <div class="course-stat-label">Credits Earned for Elective Courses</div>
                 <div class="course-progress">
                     <div class="course-progress-bar" style="--progress-width: 100%;"></div>
                 </div>
             </div>
         </div>
 
-        <!-- PDF成绩单查看 -->
+        <!-- PDF Transcript View -->
         <div class="pdf-container">
             <div class="pdf-header">
-                <h3>详细成绩单 PDF</h3>
+                <h3>Detailed Transcript PDF</h3>
                 <div class="pdf-actions">
                     <a href="my-grade.pdf" class="pdf-btn download" download>
-                        <span>↓</span> 下载PDF
+                        <span>↓</span> Download PDF
                     </a>
                     <button id="togglePdfView" class="pdf-btn view">
-                        <span></span> 查看PDF
+                        <span></span> View PDF
                     </button>
                 </div>
             </div>
             
-            <!-- PDF占位符（可点击打开） -->
+            <!-- PDF Placeholder (click to open) -->
             <div id="pdfPlaceholder" class="pdf-placeholder visible">
                 <div class="placeholder-icon">📄</div>
-                <div class="placeholder-title">点击此处查看成绩单</div>
+                <div class="placeholder-title">Click here to view transcript</div>
                 <div class="placeholder-description">
-                    兰州大学官方成绩单，包含所有课程成绩、学分统计和绩点计算说明。
-                    点击此处或上方的"查看PDF"按钮预览完整成绩单。
+                    Official transcript of Lanzhou University, including all course grades, credit statistics, and GPA calculation instructions.
+                    Click here or the "View PDF" button above to preview the complete transcript.
                 </div>
-                <div class="placeholder-hint">点击此处打开成绩单</div>
+                <div class="placeholder-hint">Click here to open transcript</div>
             </div>
             
-            <!-- PDF查看器（默认隐藏） -->
+            <!-- PDF Viewer (hidden by default) -->
             <div id="pdfViewerContainer" class="pdf-viewer-container">
                 <div id="pdfLoading" class="pdf-loading" style="display: none;">
                     <div class="spinner"></div>
-                    <div class="loading-text">正在加载成绩单...</div>
+                    <div class="loading-text">Loading transcript...</div>
                 </div>
                 
                 <iframe 
@@ -126,55 +126,55 @@
                     width="100%" 
                     height="100%" 
                     frameborder="0"
-                    title="成绩单PDF文件"
+                    title="Transcript PDF File"
                     style="border: none;"
                 >
-                    您的浏览器不支持PDF预览，请<a href="my-grade.pdf">下载PDF文件</a>
+                    Your browser does not support PDF preview. Please <a href="my-grade.pdf">download the PDF file</a>
                 </iframe>
                 
                 <div id="pdfStatus" class="pdf-status" style="display: none;">
-                    <span>文件大小: <span class="pdf-size">~2.5 MB</span></span>
-                    <span>最后更新: 2025-09-23</span>
+                    <span>File size: <span class="pdf-size">~2.5 MB</span></span>
+                    <span>Last updated: 2025-09-23</span>
                 </div>
             </div>
             
             <div style="margin-top: 20px; font-size: 13px; color: #888; text-align: center;">
-                <p>兰州大学教务处官方成绩单 | 如需纸质版请联系教务处</p>
+                <p>Official Transcript of Lanzhou University Academic Affairs Office | For paper copies, please contact the Academic Affairs Office</p>
             </div>
         </div>
 
-        <!-- 全屏查看模式 -->
+        <!-- Fullscreen View Mode -->
         <div id="pdfFullscreen" class="pdf-fullscreen">
             <button class="close-fullscreen" id="closeFullscreen">×</button>
             <iframe 
                 id="fullscreenPdf"
                 src=""
                 frameborder="0"
-                title="成绩单PDF文件（全屏模式）"
+                title="Transcript PDF File (Fullscreen Mode)"
             ></iframe>
         </div>
 
-        <!-- 说明信息 -->
+        <!-- Explanatory Information -->
         <div style="background: #f8fafc; padding: 25px; border-radius: 12px; border: 1px solid #e2e8f0; margin-top: 40px;">
             <h3 style="font-size: 16px; font-weight: 600; color: #333; margin: 0 0 15px 0; letter-spacing: 0.5px;">
-                成绩单说明
+                Transcript Explanation
             </h3>
             <ul style="font-size: 14px; color: #666; line-height: 1.7; padding-left: 20px; margin: 0;">
-                <li>平均学分绩点(GPA)采用5分制计算，90-100分对应4.0-5.0绩点</li>
-                <li>必修+限选课程GPA：4.02/5.0（包含所有专业必修和限选课程）</li>
-                <li>全部课程GPA：3.98/5.0（包含所有已修课程）</li>
-                <li>专业排名：Top 5%（数学与应用数学专业）</li>
-                <li>理论课程18学时=1学分，实验课程36学时=1学分</li>
+                <li>Average Grade Point Average (GPA) is calculated on a 5-point scale, with 90-100 points corresponding to 4.0-5.0 GPA</li>
+                <li>Required + Restricted Elective Courses GPA: 4.02/5.0 (including all major required and restricted elective courses)</li>
+                <li>All Courses GPA: 3.98/5.0 (including all completed courses)</li>
+                <li>Major Ranking: Top 5% (Mathematics and Applied Mathematics)</li>
+                <li>Theoretical courses: 18 class hours = 1 credit; Experimental courses: 36 class hours = 1 credit</li>
             </ul>
         </div>
 
         <div id="footer">
-            最后更新: 2025-12-1 | Designed by Yi He
+            Last updated: 2025-12-1 | Designed by Yi He
         </div>
     </div>
 
     <script>
-        // PDF查看器控制
+        // PDF Viewer Control
         document.addEventListener('DOMContentLoaded', function() {
             const toggleBtn = document.getElementById('togglePdfView');
             const pdfPlaceholder = document.getElementById('pdfPlaceholder');
@@ -189,20 +189,20 @@
             let isPdfVisible = false;
             let hasLoaded = false;
             
-            // 打开PDF查看器的函数
+            // Function to open PDF viewer
             function openPdfViewer() {
                 if (!isPdfVisible) {
-                    // 显示PDF
+                    // Display PDF
                     if (!hasLoaded) {
-                        // 第一次加载，显示加载动画
+                        // First load, show loading animation
                         pdfLoading.style.display = 'flex';
                         pdfViewer.classList.remove('hidden');
                         pdfViewer.classList.add('visible');
                         
-                        // 设置PDF源
+                        // Set PDF source
                         pdfViewer.src = 'my-grade.pdf';
                         
-                        // 等待PDF加载
+                        // Wait for PDF to load
                         setTimeout(() => {
                             pdfLoading.style.display = 'none';
                             pdfPlaceholder.classList.remove('visible');
@@ -212,7 +212,7 @@
                             hasLoaded = true;
                         }, 800);
                     } else {
-                        // 已经加载过，直接显示
+                        // Already loaded, show directly
                         pdfPlaceholder.classList.remove('visible');
                         pdfPlaceholder.classList.add('hidden');
                         pdfViewer.classList.remove('hidden');
@@ -221,27 +221,27 @@
                         fullscreenBtn.style.display = 'inline-flex';
                     }
                     
-                    toggleBtn.innerHTML = '<span></span> 隐藏PDF';
+                    toggleBtn.innerHTML = '<span></span> Hide PDF';
                     isPdfVisible = true;
                 }
             }
             
-            // 关闭PDF查看器的函数
+            // Function to close PDF viewer
             function closePdfViewer() {
                 if (isPdfVisible) {
-                    // 隐藏PDF
+                    // Hide PDF
                     pdfPlaceholder.classList.remove('hidden');
                     pdfPlaceholder.classList.add('visible');
                     pdfViewer.classList.remove('visible');
                     pdfViewer.classList.add('hidden');
                     pdfStatus.style.display = 'none';
                     
-                    toggleBtn.innerHTML = '<span></span> 查看PDF';
+                    toggleBtn.innerHTML = '<span></span> View PDF';
                     isPdfVisible = false;
                 }
             }
             
-            // 切换PDF查看器显示/隐藏
+            // Toggle PDF viewer display
             toggleBtn.addEventListener('click', function() {
                 if (isPdfVisible) {
                     closePdfViewer();
@@ -250,14 +250,14 @@
                 }
             });
             
-            // 占位符点击事件 - 点击占位符打开PDF
+            // Placeholder click event - open PDF when clicking placeholder
             pdfPlaceholder.addEventListener('click', function(e) {
-                // 阻止事件冒泡，避免与内部元素的点击冲突
+                // Prevent event bubbling to avoid conflicts with inner elements
                 e.stopPropagation();
                 openPdfViewer();
             });
             
-            // 占位符内的提示文本点击事件
+            // Click event for hint text in placeholder
             const placeholderHint = pdfPlaceholder.querySelector('.placeholder-hint');
             if (placeholderHint) {
                 placeholderHint.addEventListener('click', function(e) {
@@ -266,7 +266,7 @@
                 });
             }
             
-            // 占位符内的图标点击事件
+            // Click event for icon in placeholder
             const placeholderIcon = pdfPlaceholder.querySelector('.placeholder-icon');
             if (placeholderIcon) {
                 placeholderIcon.addEventListener('click', function(e) {
@@ -275,7 +275,7 @@
                 });
             }
             
-            // 占位符内的标题点击事件
+            // Click event for title in placeholder
             const placeholderTitle = pdfPlaceholder.querySelector('.placeholder-title');
             if (placeholderTitle) {
                 placeholderTitle.addEventListener('click', function(e) {
@@ -284,7 +284,7 @@
                 });
             }
             
-            // 占位符内的描述点击事件
+            // Click event for description in placeholder
             const placeholderDescription = pdfPlaceholder.querySelector('.placeholder-description');
             if (placeholderDescription) {
                 placeholderDescription.addEventListener('click', function(e) {
@@ -293,19 +293,19 @@
                 });
             }
             
-            // PDF查看器点击事件 - 点击PDF查看器本身不关闭
+            // PDF viewer click event - don't close when clicking viewer itself
             pdfViewer.addEventListener('click', function(e) {
                 e.stopPropagation();
-                // 点击PDF查看器本身不做任何操作，保持打开状态
+                // Do nothing when clicking the PDF viewer itself, keep it open
             });
             
-            // PDF查看器容器点击事件
+            // PDF viewer container click event
             pdfViewerContainer.addEventListener('click', function(e) {
-                // 阻止点击容器时关闭PDF
+                // Prevent closing PDF when clicking container
                 e.stopPropagation();
             });
             
-            // 全屏查看功能
+            // Fullscreen view function
             fullscreenBtn.addEventListener('click', function() {
                 pdfFullscreen.classList.add('active');
                 fullscreenPdf.src = 'my-grade.pdf';
@@ -318,7 +318,7 @@
                 document.body.style.overflow = 'auto';
             });
             
-            // ESC键退出全屏
+            // ESC key to exit fullscreen
             document.addEventListener('keydown', function(e) {
                 if (e.key === 'Escape' && pdfFullscreen.classList.contains('active')) {
                     pdfFullscreen.classList.remove('active');
@@ -327,7 +327,7 @@
                 }
             });
             
-            // 点击全屏背景退出
+            // Click fullscreen background to exit
             pdfFullscreen.addEventListener('click', function(e) {
                 if (e.target === pdfFullscreen) {
                     pdfFullscreen.classList.remove('active');
@@ -336,7 +336,7 @@
                 }
             });
             
-            // 双击PDF查看器进入全屏模式
+            // Double click PDF viewer to enter fullscreen mode
             pdfViewerContainer.addEventListener('dblclick', function() {
                 if (isPdfVisible) {
                     pdfFullscreen.classList.add('active');
@@ -345,9 +345,9 @@
                 }
             });
             
-            // 添加键盘快捷键：空格键切换PDF显示/隐藏
+            // Add keyboard shortcut: spacebar to toggle PDF display
             document.addEventListener('keydown', function(e) {
-                // 如果焦点不在输入框中，可以使用空格键切换
+                // Can use spacebar to toggle if focus is not in input fields
                 if (e.key === ' ' && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
                     e.preventDefault();
                     if (isPdfVisible) {
