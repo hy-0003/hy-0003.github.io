@@ -91,3 +91,5 @@ h2 {
     .award-header { padding: 15px; }
     .proof-container { padding: 10px; }
 }
+
+#footer { margin-top: 60px; font-size: 13px; color: #aaa; text-align: center; }
