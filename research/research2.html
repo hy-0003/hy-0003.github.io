@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="research2.css" type="text/css" />
+    <title>科研经历 - 贺毅</title>
+</head>
+<body>
+    <div id="layout-content">
+        <div class="project-overview-card">
+            <div class="tech-decoration"></div>
+            <div class="tech-decoration"></div>
+            <div class="tech-decoration"></div>
+            <h1>深度探索 ——— 数学 & 人工智能</h1>
+            <p>我参与的科研项目，涵盖深度学习、生物信息学、计算数学、计算机视觉、计算群论等多个领域</p>
+        </div>
+
+        <!-- 项目1: DL求解Fokker-Planck方程 -->
+        <div class="project-card">
+            <h2 class="project-title">Deep BSDES: 球面 Fokker-Planck 与 Feynman-Kac 方程求解</h2>
+            <p class="project-meta">兰州大学 · 邓伟华教授(杰青)课题组 | 协作指导：王恒博士</p>
+            
+            <div class="tech-tags">
+                <div class="tech-tag">主持</div>
+                <div class="tech-tag">AI for PDE</div>
+                <div class="tech-tag">Deep BSDE Method</div>
+                <div class="tech-tag">Spherical Geometry</div>
+            </div>
+            
+            <p class="project-description">
+                <b>摘要</b>：针对球面几何约束下的高维偏微分方程，利用深度学习与随机微分方程(BSDE)结合方法进行数值求解，解决了传统方法在高维下的维数灾难问题。
+                通过完善算法、调整超参数，将模型损失函数稳定收敛至1e-03量级，绝对误差0.0014(相对误差5.7%)。
+                为解决损失函数收敛不稳定问题，提出球面BSDE方法，促使模型收敛速度加倍、损失函数趋于正常平缓。
+                通过对比分析，验证了BSDE方法在求解PDE方程中的有效性
+            </p>
+            
+            <div class="contribution-highlight">
+                <strong>预期成果：</strong> 
+                <span>SCI二区及以上级别的学术论文，GitHub开源算法实现</span>
+            </div>
+            
+            <!-- 核心贡献滑动容器 -->
+            <div class="slide-container">
+                <button class="slide-nav prev" onclick="slidePrev('theorySlide1')">‹</button>
+                <button class="slide-nav next" onclick="slideNext('theorySlide1')">›</button>
+                
+                <div class="slide-content" id="theorySlide1">
+                    <div class="slide-item">
+                        <h3>理论推导</h3>
+                        <p>推导球面Fokker-Planck与FeynmanKac方程BSDE，推导球面Deep BSDE理论方法。通过分析球面几何特性，将奇异性问题归结为坐标变换</p>
+                    </div>
+                    
+                    <div class="slide-item">
+                        <h3>算法实现</h3>
+                        <p>自主设计神经网络架构，实现蒙特卡洛算法，优化训练过程，提升计算效率</p>
+                        <p>开发了并行化采样算法以高效利用GPU，将计算速度提升3倍以上，同时保持数值稳定性</p>
+                    </div>
+                    
+                    <div class="slide-item">
+                        <h3>对比分析</h3>
+                        <p>系统对比Deep BSDE方法与传统数值算法，验证新方法在高维问题中的优越性。在10维、20维和100维问题上进行了数值实验</p>
+                        <p>结果显示，新方法在保持相同精度的情况下，计算时间减少了70-90%，内存使用降低了40%</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 项目成果展示滑动容器 -->
+            <div class="slide-container">
+                <button class="slide-nav prev" onclick="slidePrev('imageSlide1')">‹</button>
+                <button class="slide-nav next" onclick="slideNext('imageSlide1')">›</button>
+                
+                <div class="slide-content" id="imageSlide1">
+                    <div class="slide-item image-slide-item">
+                        <img src="project_image/bsde1.png" alt="损失函数收敛曲线">
+                        <div class="slide-caption">
+                            <strong>损失函数收敛曲线</strong><br>
+                            展示了训练过程中损失函数的快速收敛
+                        </div>
+                    </div>
+                    
+                    <div class="slide-item image-slide-item">
+                        <img src="project_image/bsde2.png" alt="BSDE原始分析">
+                        <div class="slide-caption">
+                            <strong>BSDE原始分析</strong><br>
+                            与传统方法的对比分析结果
+                        </div>
+                    </div>
+                    
+                    <div class="slide-item image-slide-item">
+                        <img src="project_image/bsde3.png" alt="新型算法">
+                        <div class="slide-caption">
+                            <strong>新型算法提出</strong><br>
+                            球面Deep BSDE方法的核心架构
+                        </div>
+                    </div>
+                    
+                    <div class="slide-item image-slide-item">
+                        <img src="project_image/bsde5.png" alt="自主搭建DL">
+                        <div class="slide-caption">
+                            <strong>自主搭建DL框架</strong><br>
+                            基于PyTorch实现的神经网络框架
+                        </div>
+                    </div>
+                    
+                    <div class="slide-item image-slide-item">
+                        <img src="project_image/bsde6.png" alt="Latex渲染">
+                        <div class="slide-caption">
+                            <strong>Latex渲染</strong><br>
+                            论文中的理论推导和公式展示
+                        </div>
+                    </div>
+                    
+                    <div class="slide-item image-slide-item">
+                        <img src="project_image/comparison.png" alt="对比结果">
+                        <div class="slide-caption">
+                            <strong>对比实验结果</strong><br>
+                            与传统方法在多维度问题上的性能对比
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- 项目2: iDNA模型预测基因甲基化 -->
+        <div class="project-card">
+            <h2 class="project-title">BPDNA-GME模型 与 Bio-Prism框架</h2>
+            <p class="project-meta">香港城市大学 · 卢天驰博士课题组</p>
+            
+            <div class="tech-tags">
+                <div class="tech-tag">生物信息学</div>
+                <div class="tech-tag">DNA甲基化预测</div>
+                <div class="tech-tag">FiLM+MoE</div>
+                <div class="tech-tag">可解释AI</div>
+                <div class="tech-tag">CWGA、CAD</div>
+                <div class="tech-tag">生成甲基化新假说</div>
+            </div>
+            
+            <p class="project-description">
+                <b>摘要</b>：模型在17个标准数据集上进行DNA甲基化预测，效果超越SOTA。
+                创新性引入DNABERT2模型，首次构建FiLM+MoE的Fusion模块，实现特征动态调整，结合轻量Transformer专家与门控机制完成高效特征融合。
+                针对该领域可解释性问题，提出Bio-Prism可解释性框架，进行全面系统分析。验证已知motif，并发现新的潜在motif，深入分析启发提出新的生物学假说
+            </p>
+            
+            <div class="contribution-highlight">
+                <strong>预期成果：</strong> 
+                <span>SCI一区Top及以上级别的学术论文，Bio-Prism学术品牌网站、技术文档、GitHub开源模型、微调模型</span>
+            </div>
+            
+            <!-- 核心贡献滑动容器 -->
+            <div class="slide-container">
+                <button class="slide-nav prev" onclick="slidePrev('theorySlide3')">‹</button>
+                <button class="slide-nav next" onclick="slideNext('theorySlide3')">›</button>
+                
+                <div class="slide-content" id="theorySlide3">
+                    <div class="slide-item">
+                        <h3>性能突破</h3>
+                        <p>在大部分标准数据集上超越SOTA模型</p>
+                        <p>实现了在保持高性能的同时大幅减少模型复杂度：参数数量减少52%</p>
+                    </div>
+                    
+                    <div class="slide-item">
+                        <h3>架构创新</h3>
+                        <p>首次构建FiLM+MoE的Fusion模型，实现特征动态调整，结合轻量Transformer专家与门控机制完成高效特征融合</p>
+                        <p>创新性引入DNABERT2模型，对DNABERT2与DNABERT-6mer进行微调，组成双特征框架</p>
+                    </div>
+                    
+                    <div class="slide-item">
+                        <h3>可解释性分析</h3>
+                        <p>开发了多层次可解释性分析框架Bio-Prism，从效果、决策机制、生物意义联系三个递进层面进行可解释性分析</p>
+                        <p>展示新可解释性算法解构统计信息能力，得出生物学意义motif，深入分析某一现象启发提出新的可验证生物学假说</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 项目成果展示滑动容器 -->
+            <div class="slide-container">
+                <button class="slide-nav prev" onclick="slidePrev('imageSlide3')">‹</button>
+                <button class="slide-nav next" onclick="slideNext('imageSlide3')">›</button>
+                
+                <div class="slide-content" id="imageSlide3">
+                    <div class="slide-item image-slide-item">
+                        <img src="project_image/idna1.png" alt="模型架构">
+                        <div class="slide-caption">
+                            <strong>FiLM+MoE融合架构</strong><br>
+                            创新的模型架构设计
+                        </div>
+                    </div>
+                    
+                    <div class="slide-item image-slide-item">
+                        <img src="project_image/idna2.png" alt="比较结果">
+                        <div class="slide-caption">
+                            <strong>与其他模型性能对比</strong><br>
+                            在多个数据集上的SOTA性能
+                        </div>
+                    </div>
+                    
+                    <div class="slide-item image-slide-item">
+                        <img src="project_image/idna3.png" alt="特征分析">
+                        <div class="slide-caption">
+                            <strong>特征可视化分析</strong><br>
+                            模型学习到的特征表示
+                        </div>
+                    </div>
+                    
+                    <div class="slide-item image-slide-item">
+                        <img src="project_image/idna5.png" alt="可解释性">
+                        <div class="slide-caption">
+                            <strong>生物可解释性分析</strong><br>
+                            模型决策的生物合理性验证
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 项目3: 工业零件表征组装 -->
+        <div class="project-card">
+            <h2 class="project-title">工业零件表征识别</h2>
+            <p class="project-meta">北师香港浸会大学 · 曾铁勇教授UIC路径实验组</p>
+            
+            <div class="tech-tags">
+                <div class="tech-tag">PointNet</div>
+                <div class="tech-tag">对比学习</div>
+                <div class="tech-tag">REQNN</div>
+                <div class="tech-tag">3D点云表征</div>
+            </div>
+            
+            <p class="project-description">
+                <b>摘要</b>：针对工业3D零件在无序堆叠场景下的识别难题，本项目致力于提升点云表征的鲁棒性。深入调研点云对比学习前沿，
+                为解决三维空间中的旋转敏感性问题，创新性引入具有<b></b>旋转等变性的四元数神经网络 (REQNN)</b>，
+                通过重构底层算子实现了符合物理几何规律的特征提取，显著提升了模型在任意姿态下的表征能力
+            </p>
+            <div class="contribution-highlight">
+                <strong>核心成果：</strong> 
+                <span>提出使用 REQNN 底层解构以提高 3D 点云旋转鲁棒性</span>
+            </div>
+            
+            <!-- 核心贡献滑动容器 -->
+            <div class="slide-container">
+                <button class="slide-nav prev" onclick="slidePrev('theorySlide3')">‹</button>
+                <button class="slide-nav next" onclick="slideNext('theorySlide3')">›</button>
+                
+                <div class="slide-content" id="theorySlide3">
+                    <div class="slide-item">
+                        <h3>前沿调研与架构设计</h3>
+                        <p>深入研究点云级别对比学习范式，使用对比学习</p>
+                        <p>针对传统CNN在3D旋转下的局限性，提出引入<b>旋转等变网络</b>与情景分割任务，以增强模型对零件几何结构的理解能力</p>
+                    </div>  
+                    <div class="slide-item">
+                        <h3>REQNN 算法实现</h3>
+                        <p>负责<b>四元数卷积 (Quaternion Convolution)</b> 等底层算子的代码编写与环境配置</p>
+                        <p>将神经网络权重矩阵修改为四元数形式，使得特征提取过程严格满足三维旋转等变性，实现从理论公式到工程代码的落地</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 项目成果展示滑动容器 -->
+            <div class="slide-container">
+                <button class="slide-nav prev" onclick="slidePrev('imageSlide3')">‹</button>
+                <button class="slide-nav next" onclick="slideNext('imageSlide3')">›</button>
+        
+                <div class="slide-content" id="imageSlide3">
+                    <div class="slide-item image-slide-item">
+                        <img src="project_image/reqnn_arch.png" alt="REQNN架构图">
+                        <div class="slide-caption">
+                            <strong>REQNN 网络架构</strong><br>
+                            基于四元数代数的旋转等变性特征提取网络设计
+                        </div>
+                    </div>
+                    <div class="slide-item image-slide-item">
+                        <img src="project_image/point_cloud_vis.png" alt="点云可视化">
+                        <div class="slide-caption">
+                            <strong>3D 点云特征可视化</strong><br>
+                            模型在不同旋转角度下提取的特征保持高度一致
+                        </div>
+                    </div>
+                    <div class="slide-item image-slide-item">
+                        <img src="project_image/performance_chart.png" alt="性能对比">
+                        <div class="slide-caption">
+                            <strong>鲁棒性测试结果</strong><br>
+                            引入 REQNN 后，模型在任意旋转姿态下的识别率显著提升
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 项目4: 有限链上保向映射幺半群及不动点统计 -->
+        <div class="project-card">
+            <h2 class="project-title">有限链上保向映射幺半群及不动点统计</h2>
+            <p class="project-meta">兰州大学 · 张文婷课题组 | 协作指导：安洋硕士</p>
+            
+            <div class="tech-tags">
+                <div class="tech-tag">计算群论</div>
+                <div class="tech-tag">组合数学</div>
+                <div class="tech-tag">半群理论</div>
+            </div>
+            
+            <p class="project-description">
+                <b>摘要</b>：基于 Catarino & Higgins (1999) 关于链上保向映射幺半群的理论基础，实现了 O_n（保序）与 OP_n（保向）变换半群的算法构建。
+                设计算法计算映射的不动点分布，并进行数值验证与统计分析，验证相关代数包含关系。
+                最终通过总结统计规律助力计数公式发现
+            </p>
+            <div class="contribution-highlight">
+                <strong>核心成果：</strong> 
+                <span>半群算法实现与不动点分布计算 ·</span>
+            </div>
+            
+            <!-- 核心贡献滑动容器 -->
+            <div class="slide-container">
+                <button class="slide-nav prev" onclick="slidePrev('theorySlide3')">‹</button>
+                <button class="slide-nav next" onclick="slideNext('theorySlide3')">›</button>
+                
+                <div class="slide-content" id="theorySlide3">
+                    <div class="slide-item">
+                        <h3>算法设计与实现</h3>
+                        <p>利用 <code>itertools</code> 库构建组合迭代器，高效生成有限链 $X_n$ 上的 $O_n$ 保序映射集合</p>
+                        <p>通过循环群生成元构造共轭变换，实现了 OP_n 保向映射的生成算法</p>
+                    </div>  
+                    <div class="slide-item">
+                        <h3>数值验证与统计</h3>
+                        <p>批量计算不同 n 值下的映射不动点个数，根据结果验证半群理论包含关系</p>
+                        <p>总结分析统计规律助力半群阶数公式及不动点分布等式</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 项目成果展示滑动容器 -->
+            <div class="slide-container">
+                <button class="slide-nav prev" onclick="slidePrev('imageSlide3')">‹</button>
+                <button class="slide-nav next" onclick="slideNext('imageSlide3')">›</button>
+        
+                <div class="slide-content" id="imageSlide3">
+                    <div class="slide-item image-slide-item">
+                        <img src="project_image/reqnn_arch.png" alt="算法实现代码">
+                        <div class="slide-caption">
+                            <strong>映射生成算法</strong><br>
+                            结合理论与高效库生成 O_n 与 OP_n 集合
+                        </div>
+                    </div>
+                    <div class="slide-item image-slide-item">
+                        <img src="project_image/point_cloud_vis.png" alt="统计数据">
+                        <div class="slide-caption">
+                            <strong>不动点分布统计</strong><br>
+                            不同阶数 n 下的不动点分布数值统计
+                        </div>
+                    </div>
+                    <div class="slide-item image-slide-item">
+                        <img src="project_image/performance_chart.png" alt="数值验证结果">
+                        <div class="slide-caption">
+                            <strong>包含关系验证</strong><br>
+                            验证相关半群包含关系
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+
+
+
+
+        <div id="footer">
+            最后更新: 2025-12-1 | Designed by Yi He
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- JavaScript滑动功能 -->
+    <script>
+        // 计算滑动距离
+        function getSlideOffset(slide) {
+            const itemWidth = slide.querySelector('.slide-item').offsetWidth;
+            const gap = 20; // 与CSS中的gap一致
+            return itemWidth + gap;
+        }
+
+        // 滑动到前一页
+        function slidePrev(slideId) {
+            const slide = document.getElementById(slideId);
+            if (!slide) return;
+            const offset = getSlideOffset(slide);
+            slide.scrollBy({ left: -offset, behavior: 'smooth' });
+        }
+
+        // 滑动到后一页
+        function slideNext(slideId) {
+            const slide = document.getElementById(slideId);
+            if (!slide) return;
+            const offset = getSlideOffset(slide);
+            slide.scrollBy({ left: offset, behavior: 'smooth' });
+        }
+
+        // 添加键盘导航支持
+        document.addEventListener('keydown', function(event) {
+            // 获取当前活动的滑动容器
+            const activeSlide = document.activeElement.closest('.slide-container');
+            if (!activeSlide) return;
+            
+            const slideContent = activeSlide.querySelector('.slide-content');
+            if (!slideContent) return;
+            
+            const slideId = slideContent.id;
+            
+            if (event.key === 'ArrowLeft') {
+                event.preventDefault();
+                slidePrev(slideId);
+            } else if (event.key === 'ArrowRight') {
+                event.preventDefault();
+                slideNext(slideId);
+            }
+        });
+
+        // 添加触摸滑动支持
+        document.addEventListener('DOMContentLoaded', function() {
+            const slideContents = document.querySelectorAll('.slide-content');
+            
+            slideContents.forEach(slide => {
+                let startX = 0;
+                let scrollLeft = 0;
+                
+                slide.addEventListener('touchstart', function(e) {
+                    startX = e.touches[0].pageX - slide.offsetLeft;
+                    scrollLeft = slide.scrollLeft;
+                });
+                
+                slide.addEventListener('touchmove', function(e) {
+                    if (!startX) return;
+                    const x = e.touches[0].pageX - slide.offsetLeft;
+                    const walk = (x - startX) * 2; // 乘以2增加灵敏度
+                    slide.scrollLeft = scrollLeft - walk;
+                });
+                
+                slide.addEventListener('touchend', function() {
+                    startX = 0;
+                });
+            });
+        });
+    </script>
+</body>
+</html>

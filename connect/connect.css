@@ -1,0 +1,338 @@
+/* === 联系方式页面专用样式 === */
+
+/* 基础全局 - 与chome一致 */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #333;
+    background-color: #ffffff;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0 20px 80px 20px;
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+}
+body::-webkit-scrollbar { display: none; }
+
+#layout-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+/* 页面标题区域 */
+.contact-header {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: center;
+}
+
+.contact-header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #111;
+    margin: 0 0 15px 0;
+    letter-spacing: -0.5px;
+}
+
+.header-subtitle {
+    font-size: 15px;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* 返回链接 */
+.back-link {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 8px 16px;
+    background-color: #f5f7fa;
+    color: #333;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: background-color 0.2s;
+}
+
+.back-link:hover {
+    background-color: #e4e7eb;
+    text-decoration: none;
+}
+
+/* 联系方式网格 */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 60px;
+}
+
+.contact-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 35px 30px;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.contact-card:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+    border-color: #e0e7ff;
+    transform: translateY(-3px);
+}
+
+/* 联系图标 */
+.contact-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 25px;
+    background: #f8fafc;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: #0066cc;
+    border: 1px solid rgba(0, 102, 204, 0.1);
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover .contact-icon {
+    background: #f0f7ff;
+    transform: scale(1.05);
+}
+
+/* 联系信息 */
+.contact-info h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    opacity: 0.8;
+}
+
+.contact-details {
+    margin-top: 15px;
+}
+
+.contact-item {
+    margin-bottom: 12px;
+    font-size: 15px;
+    color: #555;
+    padding: 10px 0;
+    border-bottom: 1px solid #f5f5f5;
+    transition: color 0.2s;
+}
+
+.contact-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.contact-item:hover {
+    color: #0066cc;
+}
+
+.contact-label {
+    display: block;
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* 作品展示区域 */
+.works-section {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111;
+    margin: 0 0 30px 0;
+    text-align: center;
+    letter-spacing: -0.3px;
+}
+
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 25px;
+}
+
+@media (max-width: 768px) {
+    .works-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.work-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.work-card:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+    border-color: #e0e7ff;
+    transform: translateY(-3px);
+}
+
+.work-icon {
+    width: 60px;
+    height: 60px;
+    background: #f8fafc;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.work-card:hover .work-icon {
+    transform: scale(1.05);
+}
+
+.github-icon {
+    background: #1a1a1a;
+}
+
+.zhihu-icon {
+    background: #0066ff;
+}
+
+.work-content {
+    flex: 1;
+}
+
+.work-title {
+    font-size: 17px;
+    font-weight: 600;
+    color: #111;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.2px;
+}
+
+.work-link {
+    display: inline-block;
+    font-size: 14.5px;
+    color: #555;
+    text-decoration: none;
+    padding: 8px 0;
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s;
+    word-break: break-all;
+}
+
+.work-link:hover {
+    color: #0066cc;
+    border-bottom-color: rgba(0, 102, 204, 0.2);
+}
+
+.work-description {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    margin-top: 12px;
+    opacity: 0.9;
+}
+
+/* 底部装饰线条 */
+.card-decoration {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(0, 102, 204, 0.1), 
+        transparent);
+}
+
+/* 页脚 */
+#footer {
+    margin-top: 80px;
+    font-size: 13px;
+    color: #aaa;
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #f0f0f0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    body {
+        padding: 0 15px 60px 15px;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .contact-card {
+        padding: 25px 20px;
+    }
+    
+    .work-card {
+        padding: 25px;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .work-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+    
+    .back-link {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+}
+
+/* 隐藏滚动条 */
+::-webkit-scrollbar {
+    display: none;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+html, body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}

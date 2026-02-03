@@ -1,0 +1,232 @@
+/* === 全局重置 === */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* 优先使用 Inter 字体，显得非常干净高级 */
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* 防止双重滚动 */
+}
+
+/* === 顶部导航栏 (核心设计) === */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* 增加高度，增加呼吸感 (你要求的更宽) */
+    height: 80px; 
+    z-index: 1000;
+    
+    /* 高级毛玻璃效果 */
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    
+    /* 极细的底部边框，增加精致感 */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05); 
+}
+
+.header-inner {
+    /* 限制内容最大宽度，但在大屏幕上拉得更开 */
+    max-width: 1440px; 
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px; /* 左右留白 */
+}
+
+/* === 左侧 Logo === */
+.logo {
+    font-size: 24px; /* 名字大一点 */
+    font-weight: 700;
+    color: #111;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* === 右侧导航菜单 === */
+.site-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 8px; /* 按钮之间的间距 */
+}
+
+.site-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #555; /* 默认深灰色，不刺眼 */
+    
+    /* 你要求的：字体更大 */
+    font-size: 17px; 
+    font-weight: 500;
+    
+    /* 增加点击区域和视觉面积 */
+    padding: 10px 18px; 
+    border-radius: 8px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 悬停效果：轻微的背景色变化 */
+.site-nav li a:hover {
+    color: #000;
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+/* 选中状态：深色文字 + 浅灰背景 */
+.site-nav li a.active {
+    color: #000;
+    background-color: rgba(0, 0, 0, 0.06);
+    font-weight: 600;
+}
+
+/* === 主要内容区域 === */
+.main-content {
+    /* 顶部填充必须等于 header 高度 (80px) */
+    padding-top: 80px; 
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+iframe {
+    width: 100%;
+    max-width: 1200px; /* 限制阅读内容宽度，模仿论文阅读体验 */
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+/* === 移动端适配 === */
+@media (max-width: 850px) {
+    .site-header {
+        height: auto;
+        padding: 15px 0;
+    }
+    .header-inner {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .site-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+    .main-content {
+        padding-top: 130px;
+    }
+}
+
+
+
+/* Footer 容器设计 */
+.site-footer {
+    width: 100%;
+    background-color: #ffffff; /* 纯白背景 */
+    border-top: 1px solid rgba(0, 0, 0, 0.05); /* 与 Header 呼应的极细边框 */
+    padding: 15px 40px; /* 紧凑的内边距 */
+    display: flex;
+    justify-content: space-between; /* 左右分布：左边数据，右边地图 */
+    align-items: center;
+    z-index: 900;
+}
+
+/* === 左侧：数字统计 === */
+.stats-container {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* 数据之间的间距 */
+    font-family: 'Inter', -apple-system, sans-serif;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column; /* 上下排列：标签在上，数字在下 */
+    align-items: flex-start;
+}
+
+.stat-label {
+    font-size: 10px;
+    text-transform: uppercase; /* 全大写，显得高级 */
+    letter-spacing: 1px;
+    color: #999; /* 浅灰色标签 */
+    margin-bottom: 2px;
+}
+
+.stat-value {
+    font-size: 16px;
+    font-weight: 600; /* 数字加粗 */
+    color: #111; /* 深黑色数字 */
+    font-feature-settings: "tnum"; /* 表格数字对齐特性 */
+}
+
+.stat-divider {
+    color: #eee;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+/* === 右侧：地图美化 === */
+.map-container {
+    /* 强制限制地图大小 */
+    width: 120px; 
+    height: 60px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    
+    /* 关键：黑白滤镜 */
+    /* 这会让花花绿绿的地图变成黑白灰，完美融入你的网站风格 */
+    filter: grayscale(100%) opacity(0.7); 
+    transition: all 0.3s ease;
+}
+
+/* 鼠标悬停时恢复一点色彩 */
+.map-container:hover {
+    filter: grayscale(0%) opacity(1);
+}
+
+/* 强制覆盖第三方脚本生成的 canvas/img 样式 */
+.map-container canvas, 
+.map-container img,
+.map-container a {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+/* === 移动端适配 Footer === */
+@media (max-width: 850px) {
+    .site-footer {
+        flex-direction: column-reverse; /* 手机上地图在下，数据在上 */
+        gap: 15px;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .stats-container {
+        justify-content: center;
+    }
+    
+    .stat-item {
+        align-items: center;
+    }
+    
+    .map-container {
+        width: 150px;
+        justify-content: center;
+    }
+}

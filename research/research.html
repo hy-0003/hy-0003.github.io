@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="research2.css" type="text/css" />
+    <title>Research Experience - Yi He</title>
+</head>
+<body>
+    <div id="layout-content">
+        <div class="project-overview-card">
+            <div class="tech-decoration"></div>
+            <div class="tech-decoration"></div>
+            <div class="tech-decoration"></div>
+            <h1>Deep Exploration ——— Mathematics & Artificial Intelligence</h1>
+            <p>My research projects cover multiple fields including deep learning, bioinformatics, computational mathematics, computer vision, and computational group theory</p>
+        </div>
+
+        <!-- Project 1: Solving Fokker-Planck Equations with DL -->
+        <div class="project-card">
+            <h2 class="project-title">Deep BSDES: Solving Spherical Fokker-Planck and Feynman-Kac Equations</h2>
+            <p class="project-meta">Lanzhou University · Prof. Weihua Deng (Distinguished Young Scholar) Research Group | Collaborative Advisor: Dr. Heng Wang</p>
+            
+            <div class="tech-tags">
+                <div class="tech-tag">Led</div>
+                <div class="tech-tag">AI for PDE</div>
+                <div class="tech-tag">Deep BSDE Method</div>
+                <div class="tech-tag">Spherical Geometry</div>
+            </div>
+            
+            <p class="project-description">
+                <b>Abstract</b>: For high-dimensional partial differential equations under spherical geometric constraints, we employed a combination of deep learning and stochastic differential equations (BSDE) for numerical solution, addressing the curse of dimensionality in traditional methods.
+                By improving the algorithm and adjusting hyperparameters, the model's loss function stably converged to the 1e-03 order of magnitude, with an absolute error of 0.0014 (relative error 5.7%).
+                To solve the problem of unstable convergence of the loss function, we proposed a spherical BSDE method, which doubled the convergence speed and made the loss function tend to be normally smooth.
+                Through comparative analysis, we verified the effectiveness of the BSDE method in solving PDEs.
+            </p>
+            
+            <div class="contribution-highlight">
+                <strong>Expected Outcomes:</strong> 
+                <span>Academic paper at SCI Zone 2 or higher, GitHub open-source algorithm implementation</span>
+            </div>
+            
+            <!-- Core Contribution Slider -->
+            <div class="slide-container">
+                <button class="slide-nav prev" onclick="slidePrev('theorySlide1')">‹</button>
+                <button class="slide-nav next" onclick="slideNext('theorySlide1')">›</button>
+                
+                <div class="slide-content" id="theorySlide1">
+                    <div class="slide-item">
+                        <h3>Theoretical Derivation</h3>
+                        <p>Derived BSDE for spherical Fokker-Planck and Feynman-Kac equations, and developed the spherical Deep BSDE theoretical method. By analyzing spherical geometric properties, the singularity problem was attributed to coordinate transformation.</p>
+                    </div>
+                    
+                    <div class="slide-item">
+                        <h3>Algorithm Implementation</h3>
+                        <p>Independently designed neural network architecture, implemented Monte Carlo algorithm, optimized training process, and improved computational efficiency.</p>
+                        <p>Developed a parallel sampling algorithm to efficiently utilize GPU, increasing computational speed by more than 3 times while maintaining numerical stability.</p>
+                    </div>
+                    
+                    <div class="slide-item">
+                        <h3>Comparative Analysis</h3>
+                        <p>Systematically compared the Deep BSDE method with traditional numerical algorithms, verifying the superiority of the new method in high-dimensional problems. Numerical experiments were conducted on 10D, 20D, and 100D problems.</p>
+                        <p>Results showed that the new method reduced computation time by 70-90% and memory usage by 40% while maintaining the same accuracy.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project Results Slider -->
+            <div class="slide-container">
+                <button class="slide-nav prev" onclick="slidePrev('imageSlide1')">‹</button>
+                <button class="slide-nav next" onclick="slideNext('imageSlide1')">›</button>
+                
+                <div class="slide-content" id="imageSlide1">
+                    <div class="slide-item image-slide-item">
+                        <img src="project_image/bsde1.png" alt="Loss Function Convergence Curve">
+                        <div class="slide-caption">
+                            <strong>Loss Function Convergence Curve</strong><br>
+                            Showing rapid convergence of the loss function during training
+                        </div>
+                    </div>
+                    
+                    <div class="slide-item image-slide-item">
+                        <img src="project_image/bsde2.png" alt="BSDE Original Analysis">
+                        <div class="slide-caption">
+                            <strong>BSDE Original Analysis</strong><br>
+                            Comparative analysis results with traditional methods
+                        </div>
+                    </div>
+                    
+                    <div class="slide-item image-slide-item">
+                        <img src="project_image/bsde3.png" alt="New Algorithm">
+                        <div class="slide-caption">
+                            <strong>Proposed New Algorithm</strong><br>
+                            Core architecture of the spherical Deep BSDE method
+                        </div>
+                    </div>
+                    
+                    <div class="slide-item image-slide-item">
+                        <img src="project_image/bsde5.png" alt="Self-built DL">
+                        <div class="slide-caption">
+                            <strong>Self-built DL Framework</strong><br>
+                            Neural network framework implemented based on PyTorch
+                        </div>
+                    </div>
+                    
+                    <div class="slide-item image-slide-item">
+                        <img src="project_image/bsde6.png" alt="Latex Rendering">
+                        <div class="slide-caption">
+                            <strong>Latex Rendering</strong><br>
+                            Theoretical derivations and formula presentations in the paper
+                        </div>
+                    </div>
+                    
+                    <div class="slide-item image-slide-item">
+                        <img src="project_image/comparison.png" alt="Comparison Results">
+                        <div class="slide-caption">
+                            <strong>Comparative Experiment Results</strong><br>
+                            Performance comparison with traditional methods on multi-dimensional problems
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- Project 2: iDNA Model for Gene Methylation Prediction -->
+        <div class="project-card">
+            <h2 class="project-title">BPDNA-GME Model and Bio-Prism Framework</h2>
+            <p class="project-meta">City University of Hong Kong · Dr. Tianchi Lu Research Group</p>
+            
+            <div class="tech-tags">
+                <div class="tech-tag">Bioinformatics</div>
+                <div class="tech-tag">DNA Methylation Prediction</div>
+                <div class="tech-tag">FiLM+MoE</div>
+                <div class="tech-tag">Explainable AI</div>
+                <div class="tech-tag">CWGA, CAD</div>
+                <div class="tech-tag">Generating New Methylation Hypotheses</div>
+            </div>
+            
+            <p class="project-description">
+                <b>Abstract</b>: The model performs DNA methylation prediction on 17 standard datasets, outperforming SOTA.
+                Innovatively introduced the DNABERT2 model, constructed the first FiLM+MoE Fusion module to achieve dynamic feature adjustment, and completed efficient feature fusion by combining lightweight Transformer experts and gating mechanisms.
+                Addressing the interpretability issue in this field, we proposed the Bio-Prism interpretability framework for comprehensive and systematic analysis. Verified known motifs, discovered new potential motifs, and in-depth analysis inspired new biological hypotheses.
+            </p>
+            
+            <div class="contribution-highlight">
+                <strong>Expected Outcomes:</strong> 
+                <span>Academic paper at SCI Zone 1 Top or higher, Bio-Prism academic brand website, technical documentation, GitHub open-source model, fine-tuned model</span>
+            </div>
+            
+            <!-- Core Contribution Slider -->
+            <div class="slide-container">
+                <button class="slide-nav prev" onclick="slidePrev('theorySlide3')">‹</button>
+                <button class="slide-nav next" onclick="slideNext('theorySlide3')">›</button>
+                
+                <div class="slide-content" id="theorySlide3">
+                    <div class="slide-item">
+                        <h3>Performance Breakthrough</h3>
+                        <p>Outperformed SOTA models on most standard datasets.</p>
+                        <p>Achieved significant reduction in model complexity while maintaining high performance: parameter count reduced by 52%.</p>
+                    </div>
+                    
+                    <div class="slide-item">
+                        <h3>Architectural Innovation</h3>
+                        <p>Constructed the first FiLM+MoE Fusion model to achieve dynamic feature adjustment, combining lightweight Transformer experts and gating mechanisms for efficient feature fusion.</p>
+                        <p>Innovatively introduced the DNABERT2 model, fine-tuned DNABERT2 and DNABERT-6mer to form a dual-feature framework.</p>
+                    </div>
+                    
+                    <div class="slide-item">
+                        <h3>Interpretability Analysis</h3>
+                        <p>Developed a multi-level interpretability analysis framework Bio-Prism, conducting interpretability analysis from three progressive levels: effect, decision mechanism, and biological significance connection.</p>
+                        <p>Demonstrated the ability of new interpretability algorithms to deconstruct statistical information, derived biologically meaningful motifs, and in-depth analysis of a phenomenon inspired new verifiable biological hypotheses.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project Results Slider -->
+            <div class="slide-container">
+                <button class="slide-nav prev" onclick="slidePrev('imageSlide3')">‹</button>
+                <button class="slide-nav next" onclick="slideNext('imageSlide3')">›</button>
+                
+                <div class="slide-content" id="imageSlide3">
+                    <div class="slide-item image-slide-item">
+                        <img src="project_image/idna1.png" alt="Model Architecture">
+                        <div class="slide-caption">
+                            <strong>FiLM+MoE Fusion Architecture</strong><br>
+                            Innovative model architecture design
+                        </div>
+                    </div>
+                    
+                    <div class="slide-item image-slide-item">
+                        <img src="project_image/idna2.png" alt="Comparison Results">
+                        <div class="slide-caption">
+                            <strong>Performance Comparison with Other Models</strong><br>
+                            SOTA performance on multiple datasets
+                        </div>
+                    </div>
+                    
+                    <div class="slide-item image-slide-item">
+                        <img src="project_image/idna3.png" alt="Feature Analysis">
+                        <div class="slide-caption">
+                            <strong>Feature Visualization Analysis</strong><br>
+                            Feature representations learned by the model
+                        </div>
+                    </div>
+                    
+                    <div class="slide-item image-slide-item">
+                        <img src="project_image/idna5.png" alt="Interpretability">
+                        <div class="slide-caption">
+                            <strong>Biological Interpretability Analysis</strong><br>
+                            Verification of biological rationality of model decisions
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Project 3: Industrial Part Representation Assembly -->
+        <div class="project-card">
+            <h2 class="project-title">Industrial Part Representation Recognition</h2>
+            <p class="project-meta">Beijing Normal University-Hong Kong Baptist University United International College · Prof. Tieyong Zeng UIC Path Research Group</p>
+            
+            <div class="tech-tags">
+                <div class="tech-tag">PointNet</div>
+                <div class="tech-tag">Contrastive Learning</div>
+                <div class="tech-tag">REQNN</div>
+                <div class="tech-tag">3D Point Cloud Representation</div>
+            </div>
+            
+            <p class="project-description">
+                <b>Abstract</b>: Addressing the recognition challenge of industrial 3D parts in disordered stacking scenarios, this project aims to improve the robustness of point cloud representation. Conducted in-depth research on cutting-edge point cloud contrastive learning,
+                to solve the rotation sensitivity problem in 3D space, innovatively introduced rotation-equivariant quaternion neural networks (REQNN),
+                achieving physically geometrically consistent feature extraction by reconstructing underlying operators, significantly enhancing the model's representation ability under arbitrary poses.
+            </p>
+            <div class="contribution-highlight">
+                <strong>Core Outcomes:</strong> 
+                <span>Proposed the use of REQNN underlying deconstruction to improve 3D point cloud rotation robustness</span>
+            </div>
+            
+            <!-- Core Contribution Slider -->
+            <div class="slide-container">
+                <button class="slide-nav prev" onclick="slidePrev('theorySlide3')">‹</button>
+                <button class="slide-nav next" onclick="slideNext('theorySlide3')">›</button>
+                
+                <div class="slide-content" id="theorySlide3">
+                    <div class="slide-item">
+                        <h3>Cutting-edge Research and Architecture Design</h3>
+                        <p>In-depth study of point cloud-level contrastive learning paradigms, utilizing contrastive learning.</p>
+                        <p>Addressing the limitations of traditional CNNs under 3D rotation, proposed the introduction of <b>rotation-equivariant networks</b> and scenario segmentation tasks to enhance the model's ability to understand part geometric structures.</p>
+                    </div>  
+                    <div class="slide-item">
+                        <h3>REQNN Algorithm Implementation</h3>
+                        <p>Responsible for coding and environment configuration of underlying operators such as <b>Quaternion Convolution</b>.</p>
+                        <p>Modified neural network weight matrices into quaternion form, enabling the feature extraction process to strictly satisfy 3D rotation equivariance, achieving the implementation from theoretical formulas to engineering code.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project Results Slider -->
+            <div class="slide-container">
+                <button class="slide-nav prev" onclick="slidePrev('imageSlide3')">‹</button>
+                <button class="slide-nav next" onclick="slideNext('imageSlide3')">›</button>
+        
+                <div class="slide-content" id="imageSlide3">
+                    <div class="slide-item image-slide-item">
+                        <img src="project_image/reqnn_arch.png" alt="REQNN Architecture Diagram">
+                        <div class="slide-caption">
+                            <strong>REQNN Network Architecture</strong><br>
+                            Rotation-equivariant feature extraction network design based on quaternion algebra
+                        </div>
+                    </div>
+                    <div class="slide-item image-slide-item">
+                        <img src="project_image/point_cloud_vis.png" alt="Point Cloud Visualization">
+                        <div class="slide-caption">
+                            <strong>3D Point Cloud Feature Visualization</strong><br>
+                            Features extracted by the model remain highly consistent under different rotation angles
+                        </div>
+                    </div>
+                    <div class="slide-item image-slide-item">
+                        <img src="project_image/performance_chart.png" alt="Performance Comparison">
+                        <div class="slide-caption">
+                            <strong>Robustness Test Results</strong><br>
+                            After introducing REQNN, the model's recognition rate under arbitrary rotation poses significantly improved
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Project 4: Monoids of Orientation-Preserving Mappings on Finite Chains and Fixed Point Statistics -->
+        <div class="project-card">
+            <h2 class="project-title">Monoids of Orientation-Preserving Mappings on Finite Chains and Fixed Point Statistics</h2>
+            <p class="project-meta">Lanzhou University · Prof. Wenting Zhang Research Group | Collaborative Advisor: Master Yang An</p>
+            
+            <div class="tech-tags">
+                <div class="tech-tag">Computational Group Theory</div>
+                <div class="tech-tag">Combinatorics</div>
+                <div class="tech-tag">Semigroup Theory</div>
+            </div>
+            
+            <p class="project-description">
+                <b>Abstract</b>: Based on the theoretical foundation of orientation-preserving mapping monoids on chains by Catarino & Higgins (1999), implemented algorithmic construction of Oₙ (order-preserving) and OPₙ (orientation-preserving) transformation semigroups.
+                Designed algorithms to calculate the fixed point distribution of mappings, conducted numerical verification and statistical analysis, and verified relevant algebraic inclusion relationships.
+                Finally, summarized statistical laws to facilitate the discovery of counting formulas.
+            </p>
+            <div class="contribution-highlight">
+                <strong>Core Outcomes:</strong> 
+                <span>Semigroup algorithm implementation and fixed point distribution calculation</span>
+            </div>
+            
+            <!-- Core Contribution Slider -->
+            <div class="slide-container">
+                <button class="slide-nav prev" onclick="slidePrev('theorySlide3')">‹</button>
+                <button class="slide-nav next" onclick="slideNext('theorySlide3')">›</button>
+                
+                <div class="slide-content" id="theorySlide3">
+                    <div class="slide-item">
+                        <h3>Algorithm Design and Implementation</h3>
+                        <p>Utilized the <code>itertools</code> library to construct combinatorial iterators, efficiently generating the set of Oₙ order-preserving mappings on finite chains $X_n$.</p>
+                        <p>Implemented the generation algorithm for OPₙ orientation-preserving mappings by constructing conjugate transformations using cyclic group generators.</p>
+                    </div>  
+                    <div class="slide-item">
+                        <h3>Numerical Verification and Statistics</h3>
+                        <p>Batch calculated the number of fixed points of mappings for different values of n, verifying semigroup theoretical inclusion relationships based on results.</p>
+                        <p>Summarized and analyzed statistical laws to facilitate the discovery of semigroup order formulas and fixed point distribution equalities.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project Results Slider -->
+            <div class="slide-container">
+                <button class="slide-nav prev" onclick="slidePrev('imageSlide3')">‹</button>
+                <button class="slide-nav next" onclick="slideNext('imageSlide3')">›</button>
+        
+                <div class="slide-content" id="imageSlide3">
+                    <div class="slide-item image-slide-item">
+                        <img src="project_image/reqnn_arch.png" alt="Algorithm Implementation Code">
+                        <div class="slide-caption">
+                            <strong>Mapping Generation Algorithm</strong><br>
+                            Generating Oₙ and OPₙ sets by combining theory with efficient libraries
+                        </div>
+                    </div>
+                    <div class="slide-item image-slide-item">
+                        <img src="project_image/point_cloud_vis.png" alt="Statistical Data">
+                        <div class="slide-caption">
+                            <strong>Fixed Point Distribution Statistics</strong><br>
+                            Numerical statistics of fixed point distribution for different orders n
+                        </div>
+                    </div>
+                    <div class="slide-item image-slide-item">
+                        <img src="project_image/performance_chart.png" alt="Numerical Verification Results">
+                        <div class="slide-caption">
+                            <strong>Inclusion Relationship Verification</strong><br>
+                            Verifying relevant semigroup inclusion relationships
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div id="footer">
+            Last updated: 2025-12-1 | Designed by Yi He
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- JavaScript Sliding Functionality -->
+    <script>
+        // Calculate sliding distance
+        function getSlideOffset(slide) {
+            const itemWidth = slide.querySelector('.slide-item').offsetWidth;
+            const gap = 20; // Consistent with gap in CSS
+            return itemWidth + gap;
+        }
+
+        // Slide to previous page
+        function slidePrev(slideId) {
+            const slide = document.getElementById(slideId);
+            if (!slide) return;
+            const offset = getSlideOffset(slide);
+            slide.scrollBy({ left: -offset, behavior: 'smooth' });
+        }
+
+        // Slide to next page
+        function slideNext(slideId) {
+            const slide = document.getElementById(slideId);
+            if (!slide) return;
+            const offset = getSlideOffset(slide);
+            slide.scrollBy({ left: offset, behavior: 'smooth' });
+        }
+
+        // Add keyboard navigation support
+        document.addEventListener('keydown', function(event) {
+            // Get currently active sliding container
+            const activeSlide = document.activeElement.closest('.slide-container');
+            if (!activeSlide) return;
+            
+            const slideContent = activeSlide.querySelector('.slide-content');
+            if (!slideContent) return;
+            
+            const slideId = slideContent.id;
+            
+            if (event.key === 'ArrowLeft') {
+                event.preventDefault();
+                slidePrev(slideId);
+            } else if (event.key === 'ArrowRight') {
+                event.preventDefault();
+                slideNext(slideId);
+            }
+        });
+
+        // Add touch sliding support
+        document.addEventListener('DOMContentLoaded', function() {
+            const slideContents = document.querySelectorAll('.slide-content');
+            
+            slideContents.forEach(slide => {
+                let startX = 0;
+                let scrollLeft = 0;
+                
+                slide.addEventListener('touchstart', function(e) {
+                    startX = e.touches[0].pageX - slide.offsetLeft;
+                    scrollLeft = slide.scrollLeft;
+                });
+                
+                slide.addEventListener('touchmove', function(e) {
+                    if (!startX) return;
+                    const x = e.touches[0].pageX - slide.offsetLeft;
+                    const walk = (x - startX) * 2; // Multiply by 2 to increase sensitivity
+                    slide.scrollLeft = scrollLeft - walk;
+                });
+                
+                slide.addEventListener('touchend', function() {
+                    startX = 0;
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            background: #ffffff;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px 0;
+        }
+        
+        h1, h2, h3 {
+            color: #527bbd;
+            margin-top: 0.7em;
+            margin-bottom: 0.3em;
+            padding-bottom: 0.2em;
+            line-height: 1.0;
+            padding-top: 0.5em;
+            border-bottom: 1px solid #aaaaaa;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #527bbd;
+            position: relative;
+        }
+        
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #527bbd;
+            border-radius: 2px;
+        }
+        
+        h2 {
+            padding-top: 0.8em;
+            font-size: 1.8rem;
+            margin-top: 1.5em;
+        }
+        
+        h3 {
+            font-size: 1.4rem;
+            border-bottom: none;
+            margin-top: 1.2em;
+        }
+        
+        /* 联系方式区域样式 */
+        .contact-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .contact-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+            padding: 30px;
+            transition: all 0.3s ease;
+            border: 1px solid #eaeaea;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            background-color: #f0f5ff;
+        }
+        
+        .contact-icon {
+            width: 70px;
+            height: 70px;
+            background: #527bbd;
+            border-radius: 8px; /* 方形圆角 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: white;
+            font-size: 30px;
+        }
+        
+        .contact-info {
+            width: 100%;
+        }
+        
+        .number {
+            margin-top: 10px;
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: #444;
+            padding: 8px 0;
+            transition: color 0.3s;
+        }
+        
+        .contact-card:hover .number {
+            color: #527bbd;
+        }
+        
+        /* 作品区域样式 */
+        .works-section {
+    background: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    padding: 30px;
+    margin-top: 30px;
+}
+
+.work-card {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    transition: all 0.3s;
+    border-left: 4px solid #527bbd;
+    background: #ffffff;
+}
+
+.work-card:hover {
+    background-color: #f0f5ff;
+    transform: translateX(5px);
+}
+
+.work-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    flex-shrink: 0;
+    overflow: hidden;
+    font-size: 30px;
+}
+
+/* GitHub官方圆形图标样式 */
+.github-icon {
+    background: #000000;
+    color: white;
+    border-radius: 50%; /* 圆形 */
+}
+
+/* 知乎官方方形图标样式 */
+.zhihu-icon {
+    background: #0084FF;
+    color: white;
+    border-radius: 8px; /* 方形 */
+}
+
+        .work-content {
+            flex-grow: 1;
+        }
+        
+        .no-underline {
+            text-decoration: none;
+            color: #444;
+            font-size: 1.3rem;
+            font-weight: 500;
+            transition: color 0.3s;
+            display: block;
+            padding: 5px 0;
+        }
+        
+        .no-underline:hover {
+            color: #527bbd;
+            text-decoration: underline;
+        }
+        
+        .work-title {
+            font-size: 1.2rem;
+            color: #527bbd;
+            margin-bottom: 5px;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .contact-section {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+        
+        .intro-text {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+        }

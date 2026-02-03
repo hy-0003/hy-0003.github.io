@@ -1,0 +1,443 @@
+/* === 实习经历页面专用样式 === */
+
+/* 基础全局 - 与chome一致 */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #333;
+    background-color: #ffffff;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0 20px 80px 20px;
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+}
+body::-webkit-scrollbar { display: none; }
+
+#layout-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+/* 页面标题区域 */
+.internship-header {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: center;
+}
+
+.internship-header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #111;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+/* 简介区域 */
+.intro-section {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 30px 0;
+}
+
+.intro-title {
+    font-size: 20px;
+    color: #444;
+    margin-bottom: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.intro-description {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #666;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+/* 时间轴布局 */
+.timeline-container {
+    position: relative;
+    padding-left: 20px;
+    margin-top: 40px;
+}
+
+.timeline-container::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, 
+        rgba(0, 102, 204, 0.1), 
+        rgba(0, 102, 204, 0.2) 20%, 
+        rgba(0, 102, 204, 0.3) 50%, 
+        rgba(0, 102, 204, 0.2) 80%, 
+        rgba(0, 102, 204, 0.1));
+}
+
+/* 时间轴卡片 */
+.timeline-card {
+    position: relative;
+    margin-bottom: 70px;
+    padding-left: 30px;
+    animation: cardAppear 0.6s ease-out;
+}
+
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.timeline-card::before {
+    content: "";
+    position: absolute;
+    left: -6px;
+    top: 10px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 2px solid #0066cc;
+    z-index: 2;
+}
+
+/* 公司徽章 - 更简洁 */
+.company-badge {
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    background: #f8fafc;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: #0066cc;
+    border: 1px solid rgba(0, 102, 204, 0.1);
+}
+
+/* 卡片内容 */
+.internship-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 35px;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.internship-card:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+    border-color: #e0e7ff;
+}
+
+/* 卡片标题区域 */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.company-info {
+    flex: 1;
+}
+
+.company-name {
+    font-size: 22px;
+    font-weight: 600;
+    color: #111;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.3px;
+}
+
+.company-tag {
+    display: inline-block;
+    background: #f8fafc;
+    color: #4a5568;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 5px;
+    border: 1px solid #e2e8f0;
+}
+
+/* 时间标签 */
+.date-badge {
+    background: #f8fafc;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #555;
+    white-space: nowrap;
+    border: 1px solid #e2e8f0;
+}
+
+/* 职位信息 */
+.position-info {
+    margin-bottom: 25px;
+}
+
+.position-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 15px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.position-description {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* 工作内容 - 去掉图标 */
+.responsibilities {
+    margin: 25px 0;
+}
+
+.responsibilities h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 15px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0.8;
+}
+
+.responsibilities-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.responsibilities-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    font-size: 14.5px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.responsibilities-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 5px;
+    height: 5px;
+    background: #0066cc;
+    border-radius: 50%;
+    opacity: 0.6;
+}
+
+/* 技能标签 - 更简洁 */
+.skill-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px solid #f5f5f5;
+}
+
+.skill-tag {
+    background: #f8fafc;
+    color: #4a5568;
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 12.5px;
+    font-weight: 500;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s;
+}
+
+.skill-tag:hover {
+    background: #f1f5f9;
+    border-color: #cbd5e0;
+}
+
+/* 技能掌握程度指示器 */
+.skill-metrics {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f8fafc;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+}
+
+.metric-item {
+    margin-bottom: 15px;
+}
+
+.metric-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #4a5568;
+    margin-bottom: 6px;
+}
+
+.skill-progress {
+    width: 100%;
+    height: 4px;
+    background: #e2e8f0;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.skill-progress-bar {
+    height: 100%;
+    background: #0066cc;
+    border-radius: 2px;
+    width: 0;
+    animation: progressFill 1.2s ease-out forwards;
+}
+
+@keyframes progressFill {
+    from { width: 0; }
+    to { width: var(--progress-width, 80%); }
+}
+
+/* 经验总结 */
+.experience-summary {
+    background: #f8fafc;
+    padding: 40px;
+    border-radius: 12px;
+    margin-top: 80px;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+}
+
+.experience-summary h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #111;
+    margin: 0 0 15px 0;
+    letter-spacing: 0.5px;
+}
+
+.summary-text {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: #666;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.experience-stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 28px;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 6px;
+    font-feature-settings: "tnum";
+}
+
+.stat-label {
+    font-size: 13px;
+    color: #666;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* 页脚 */
+#footer {
+    margin-top: 80px;
+    font-size: 13px;
+    color: #aaa;
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #f0f0f0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    body {
+        padding: 0 15px 60px 15px;
+    }
+    
+    .timeline-container {
+        padding-left: 15px;
+    }
+    
+    .company-badge {
+        position: relative;
+        left: 0;
+        top: 0;
+        margin-bottom: 15px;
+        width: 35px;
+        height: 35px;
+        font-size: 11px;
+    }
+    
+    .card-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .date-badge {
+        align-self: flex-start;
+    }
+    
+    .experience-stats {
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    .internship-card {
+        padding: 25px;
+    }
+    
+    .skill-cloud {
+        justify-content: flex-start;
+    }
+}
+
+/* 隐藏滚动条 */
+::-webkit-scrollbar {
+    display: none;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+html, body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}

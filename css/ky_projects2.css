@@ -1,0 +1,267 @@
+:root {
+    /* 科技感配色体系 */
+    --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    --card-glass: rgba(255, 255, 255, 0.85);
+    --card-border: 1px solid rgba(255, 255, 255, 0.9);
+    --primary-color: #2563eb; /* 科技蓝 */
+    --secondary-color: #475569;
+    --text-main: #1e293b;
+    --text-light: #64748b;
+    --accent-gradient: linear-gradient(90deg, #2563eb, #06b6d4);
+    
+    /* 阴影层级 */
+    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.01);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #f0f4f8;
+    background-image: 
+        radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+        radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%), 
+        radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%);
+    background-size: 100% 100%;
+    background-attachment: fixed; /* 背景固定 */
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* 顶部标题区 */
+header {
+    text-align: center;
+    margin-bottom: 80px;
+    position: relative;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    background: linear-gradient(to right, #ffffff, #a5b4fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    letter-spacing: -1px;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* --- 项目卡片容器 --- */
+.project-card {
+    background: var(--card-glass);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: var(--card-border);
+    border-radius: 24px;
+    padding: 0;
+    margin-bottom: 60px;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden; /* 保证圆角 */
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* 上半部分：核心信息区 (Flex布局) */
+.card-main {
+    display: flex;
+    flex-direction: row;
+    min-height: 450px;
+}
+
+/* 左侧：文字内容 */
+.card-content {
+    flex: 1.2;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-category {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.project-title {
+    font-size: 2.2rem;
+    margin: 0 0 20px 0;
+    color: #1a202c;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+/* 技术栈胶囊 */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.tech-tag {
+    background: rgba(37, 99, 235, 0.08);
+    color: #2563eb;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid rgba(37, 99, 235, 0.1);
+}
+
+/* 项目描述列表 */
+.project-desc ul {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.project-desc li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 12px;
+    color: #475569;
+}
+
+.project-desc li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* 关键指标数据栏 (Metrics) */
+.impact-metrics {
+    display: flex;
+    gap: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.metric-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.metric-value {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #0f172a;
+    font-family: monospace; /* 增加数字感 */
+}
+
+.metric-label {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin-top: 4px;
+}
+
+/* 右侧：主视觉图 */
+.card-visual {
+    flex: 1;
+    background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    overflow: hidden;
+}
+
+/* 让图片有点悬浮感 */
+.card-visual img {
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.15));
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover .card-visual img {
+    transform: scale(1.03) rotate(-1deg);
+}
+
+/* --- 下半部分：画廊 (Gallery Scroll) --- */
+.card-gallery {
+    background: rgba(255,255,255,0.5);
+    padding: 20px 50px;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.gallery-scroll {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scrollbar-width: thin;
+}
+
+/* 隐藏滚动条但保留功能 */
+.gallery-scroll::-webkit-scrollbar {
+    height: 6px;
+}
+.gallery-scroll::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+.gallery-item {
+    flex: 0 0 220px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+.gallery-caption {
+    font-size: 0.75rem;
+    padding: 8px 12px;
+    color: #64748b;
+    text-align: center;
+    background: #fff;
+    border-top: 1px solid #f1f5f9;
+}
+
+/* 移动端适配 */
+@media (max-width: 900px) {
+    .card-main {
+        flex-direction: column-reverse; /* 手机上图片在上面 */
+    }
+    .card-content {
+        padding: 30px 20px;
+    }
+    .card-visual {
+        padding: 20px;
+        min-height: 250px;
+    }
+    .impact-metrics {
+        justify-content: space-between;
+    }
+}

@@ -1,0 +1,196 @@
+body {background-color:#ffffff;
+      display: flex;
+      margin: 0;
+      padding: 0;}
+
+p {color:#252526}
+h1 {color:#252526 ; text-align: center;}
+h2 {color:#252526}
+h3 {color:#252526}
+h4 {color:#252526}
+h5 {color:#252526}
+h6 {color:#252526}
+a {color:#252526}
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 15%;
+    background-color: #eeeeee;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+li a {
+    display: block;
+    color: #555;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li a.active {
+    background-color: #555;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+
+
+iframe {
+        position: absolute;
+        right :0;
+        left: 18%; /* 左侧导航栏宽度 */
+        width: 77%; /* 内容区域宽度 */
+        height: 100%; /* 内容区域高度 */
+        flex: 1; 
+        border: none;
+}
+
+
+
+
+html {
+  background-color: #ffffff;
+}
+
+body {
+  color: #ffffff;
+  background-color: #ffffff;
+}
+
+
+#layout-menu {
+  background: #f6f6f6;
+}
+
+#layout-menu td {
+  background: #f4f4f4;
+}
+
+tt {
+  background: #ffffdd;
+}
+
+a, a > tt {
+  color: #224b8d;
+}
+
+a:hover {
+  border-bottom: 1px gray dotted;
+}
+
+#layout-menu a.current:link, #layout-menu a.current:visited {
+  color: #022b6d;
+  border-bottom: 1px gray solid;
+}
+
+#layout-menu a:link, #layout-menu a:visited, #layout-menu a:hover {
+  color: #527bbd;
+}
+
+div.menu-category {
+  border-bottom: 1px solid gray;
+}
+
+div#toptitle {
+  border-bottom: 3px double gray;
+}
+
+div#subtitle {
+  color: #000;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+h1, h2, h3 {
+  color: #527bbd;
+  border-bottom: 1px solid #aaaaaa;
+}
+
+h3 {
+  border-bottom: none;
+}
+
+div#footer {
+  color: #CD4F39;
+  border-top: 1px solid #c0c0c0;
+}
+
+div#footer a {
+  color: #80a0b0;
+}
+
+dd {
+  color: #222222;
+}
+
+div.codeblock > div.blockcontent {
+  background: #f6f6f6;
+}
+
+div.infoblock > div.blockcontent {
+  background: #ffffee;
+}
+
+div.blocktitle {
+  color: #cd7b62;
+}
+
+div.blockcontent {
+  border: 1px solid silver;
+}
+
+span.pycommand {
+  color: #000070;
+}
+
+span.statement {
+  color: #008800;
+}
+
+span.builtin {
+  color: #000088;
+}
+
+span.special {
+  color: #990000;
+}
+
+span.operator {
+  color: #880000;
+}
+
+span.error {
+  color: #aa0000;
+}
+
+span.comment, span.comment > *, span.string, span.string > * {
+  color: #606060;
+}
+
+table {
+  border: 2px solid black;
+}
+
+td {
+  border: 1px solid gray;
+}
+
+tr.heading {
+  font-weight: bold;
+  border-bottom: 2px solid black;
+}

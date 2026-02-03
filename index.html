@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="world.ico" type="image/x-icon">
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yi He | Mathematics & AI</title>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="#" onclick="loadPage(this,'ehome.html')" class="logo">Yi He</a>
+
+            <nav class="site-nav">
+                <ul>
+                    <li><a class="active" href="#" onclick="loadPage(this,'ehome/ehome.html')">Home</a></li>
+                    <li><a href="#" onclick="loadPage(this,'grade/grade.html')">Transcripts</a></li>
+                    <li><a href="#" onclick="loadPage(this,'research/research.html')">Research</a></li>
+                    <li><a href="#" onclick="loadPage(this,'internship/internship.html')">Internships</a></li>
+                    <li><a href="#" onclick="loadPage(this,'award/award.html')">Awards</a></li>
+                    <!--<li><a href="#" onclick="loadPage(this,'interest_exploration/interest.html')">Interests</a></li>
+                    <li><a href="#" onclick="loadPage(this,'ability/ability.html')">Awards</a></li>
+                    <li><a href='#' onclick="loadPage(this,'zhihu/zhihu.html')">Zhihu</a></li> -->
+                    <li><a href="#" onclick="loadPage(this,'connect/connect.html')">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="main-content">
+        <iframe id="contentFrame" src="ehome/ehome.html" frameborder="0" allow="same-origin; scripts; microphone"></iframe>
+    </main>
+
+    
+    <footer class="site-footer">
+        <div class="stats-container">
+            <div class="stat-item">
+                <span class="stat-label">Total Visits</span>
+                <span class="stat-value" id="busuanzi_value_site_pv">--</span>
+            </div>
+            <div class="stat-divider">/</div>
+            <div class="stat-item">
+                <span class="stat-label">Unique Visitors</span>
+                <span class="stat-value" id="busuanzi_value_site_uv">--</span>
+            </div>
+        </div>
+
+        <div class="map-container">
+            <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=AST9I0FR_kQOd6aAHqTzwYdyz7FpPwBuqv6B5dshAnY&cl=ffffff&w=a"></script>
+        </div>
+    </footer>
+
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <script src="js/ori.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/connect.js"></script>
+</body>
+</html>

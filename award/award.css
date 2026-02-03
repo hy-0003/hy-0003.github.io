@@ -1,0 +1,93 @@
+/* === 基础全局 === */
+html, body {
+    width: 100%;
+    overflow-y: auto; /* 允许页面垂直滚动 */
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #333;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+body { padding: 0 20px 80px 20px; box-sizing: border-box; }
+::-webkit-scrollbar { display: none; }
+
+#layout-content { max-width: 950px; margin: 0 auto; padding-top: 20px; }
+
+h2 {
+    font-size: 24px; font-weight: 700; color: #111;
+    margin: 30px 0; padding-bottom: 15px; border-bottom: 1px solid #f0f0f0;
+}
+
+/* === 列表与卡片 === */
+.awards-list { display: flex; flex-direction: column; gap: 15px; }
+
+.award-item {
+    background: #ffffff;
+    border: 1px solid #f0f0f0;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.award-item:hover {
+    border-color: #e1e4e8;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.04);
+}
+
+/* === 头部 (点击区) === */
+.award-header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 25px; cursor: pointer; background-color: #fff; user-select: none;
+}
+.award-info { flex: 1; display: flex; flex-direction: column; gap: 4px; }
+.award-title { font-size: 17px; font-weight: 600; color: #222; }
+.award-meta { font-size: 14px; color: #666; display: flex; gap: 10px; }
+.tag {
+    background: #eef6fc; color: #0066cc; padding: 2px 8px; 
+    border-radius: 4px; font-size: 12px; font-weight: 600; margin-left: 8px;
+}
+.toggle-icon {
+    width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;
+    color: #999; font-size: 18px; transition: transform 0.3s ease;
+}
+
+/* === 展开内容区域 === */
+.award-content {
+    max-height: 0;
+    overflow: hidden;
+    /* 这里的 transition 只负责收起的动画，展开时我们会用 JS 设一个很大的值 */
+    transition: max-height 0.5s ease;
+    background-color: #fff; /* 背景纯白，不要灰色 */
+}
+
+/* 激活状态 */
+.award-item.active .award-content {
+    border-top: 1px solid #f0f0f0;
+}
+
+/* === 只有图片，没有框 === */
+.proof-container {
+    width: 100%;
+    /* 去掉高度限制，去掉背景，去掉 overflow */
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.proof-img {
+    /* 宽度自适应，高度自动，保证显示全图 */
+    width: 100%;
+    height: auto; 
+    border-radius: 4px;
+    /* 加一点点阴影让白底图片能看清边界，不需要可删 */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+}
+
+/* 移动端 */
+@media (max-width: 768px) {
+    .award-header { padding: 15px; }
+    .proof-container { padding: 10px; }
+}

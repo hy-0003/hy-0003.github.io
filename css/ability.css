@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: white; /* 改为纯白色背景 */
+    font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+    padding: 20px;
+    color: #1a365d;
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin: 20px 0 40px;
+    position: relative;
+}
+
+header h1 {
+    font-size: 3.2rem;
+    color: #1e3a8a;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.section-divider {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+    margin: 60px auto;
+    width: 80%;
+    max-width: 600px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #1d4ed8;
+    margin: 40px 0 30px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+    border-radius: 2px;
+}
+
+.skills-container, .awards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.skill-card, .award-card {
+    background: white; /* 卡片保持白色 */
+    border-radius: 16px;
+    padding: 30px;
+    /* 增强阴影效果 */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.skill-card:hover, .award-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2); /* 悬停时阴影更深 */
+}
+
+.skill-title, .award-title {
+    font-size: 1.6rem;
+    color: #1e40af;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px dashed #dbeafe;
+}
+
+.skill-description, .award-description {
+    font-size: 1.1rem;
+    color: #4b5563;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+/* 修改b标签为简单黑色加粗 */
+.skill-description b, .award-description b {
+    color: #000; /* 改为黑色 */
+    font-weight: bold; /* 简单加粗 */
+    background: none; /* 移除背景 */
+    padding: 0; /* 移除内边距 */
+    border-radius: 0; /* 移除圆角 */
+}
+
+.skill-image, .award-image {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin: 15px 0;
+    border: 1px solid #dbeafe;
+    background: #f8fafc;
+    padding: 10px;
+}
+
+.skill-date, .award-date {
+    text-align: right;
+    font-size: 1rem;
+    color: #6b7280;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.button-container {
+    text-align: center;
+    width: 100%;
+    margin: 60px 0 30px;
+}
+
+.beautiful-button {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    border: none;
+    color: white;
+    padding: 16px 45px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 auto;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+    letter-spacing: 1px;
+}
+
+.beautiful-button:hover {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(30, 58, 138, 0.5);
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.4rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .skill-title, .award-title {
+        font-size: 1.4rem;
+    }
+    
+    .skill-description, .award-description {
+        font-size: 1rem;
+    }
+    
+    .beautiful-button {
+        padding: 14px 35px;
+        font-size: 1.1rem;
+    }
+    
+    .skills-container, .awards-container {
+        grid-template-columns: 1fr;
+    }
+}

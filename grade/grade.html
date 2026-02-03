@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="grade.css" type="text/css" />
+    <title>Transcript - Yi He</title>
+</head>
+<body>
+    <div id="layout-content">
+        <div class="grade-header">
+            <h1>Academic Transcript</h1>
+            <p class="header-subtitle">
+                School of Mathematics and Statistics, Lanzhou University | Mathematics and Applied Mathematics | National Fundamental Discipline Top Student Training Program
+            </p>
+        </div>
+
+        <!-- GPA Overview -->
+        <div class="gpa-indicator">
+            <div class="gpa-value">4.02</div>
+            <div class="gpa-label">Required + Restricted Elective Courses GPA</div>
+            
+            <div class="gpa-scale">
+                <div class="scale-item">
+                    <div class="scale-value">4.02 / 5.0</div>
+                    <div class="scale-label">Required + Restricted Elective</div>
+                </div>
+                <div class="scale-item">
+                    <div class="scale-value">3.98 / 5.0</div>
+                    <div class="scale-label">All Courses</div>
+                </div>
+                <div class="scale-item">
+                    <div class="scale-value">Top 5%</div>
+                    <div class="scale-label">Major Ranking</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Data Overview -->
+        <div class="grade-overview">
+            <div class="overview-card">
+                <div class="stat-value">126.2</div>
+                <div class="stat-label">Total Credits Earned</div>
+            </div>
+            
+            <div class="overview-card">
+                <div class="stat-value">147</div>
+                <div class="stat-label">Total Required Credits</div>
+            </div>
+            
+            <div class="overview-card">
+                <div class="stat-value">90.2</div>
+                <div class="stat-label">Avg. Grade of Required & Restricted Elective</div>
+            </div>
+            
+            <div class="overview-card">
+                <div class="stat-value">89.84</div>
+                <div class="stat-label">Avg. Grade of All Courses</div>
+            </div>
+        </div>
+
+        <!-- Course Category Statistics -->
+        <div class="course-stats">
+            <div class="course-stat-card">
+                <div class="course-stat-value">80.6</div>
+                <div class="course-stat-label">Credits Earned for Required Courses</div>
+                <div class="course-progress">
+                    <div class="course-progress-bar" style="--progress-width: 85%;"></div>
+                </div>
+            </div>
+            
+            <div class="course-stat-card">
+                <div class="course-stat-value">21</div>
+                <div class="course-stat-label">Credits Earned for Restricted Electives</div>
+                <div class="course-progress">
+                    <div class="course-progress-bar" style="--progress-width: 95%;"></div>
+                </div>
+            </div>
+            
+            <div class="course-stat-card">
+                <div class="course-stat-value">24.6</div>
+                <div class="course-stat-label">Credits Earned for Elective Courses</div>
+                <div class="course-progress">
+                    <div class="course-progress-bar" style="--progress-width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PDF Transcript View -->
+        <div class="pdf-container">
+            <div class="pdf-header">
+                <h3>Detailed Transcript PDF</h3>
+                <div class="pdf-actions">
+                    <a href="my-grade.pdf" class="pdf-btn download" download>
+                        <span>↓</span> Download PDF
+                    </a>
+                    <button id="togglePdfView" class="pdf-btn view">
+                        <span></span> View PDF
+                    </button>
+                </div>
+            </div>
+            
+            <!-- PDF Placeholder (click to open) -->
+            <div id="pdfPlaceholder" class="pdf-placeholder visible">
+                <div class="placeholder-icon">📄</div>
+                <div class="placeholder-title">Click here to view transcript</div>
+                <div class="placeholder-description">
+                    Official transcript of Lanzhou University, including all course grades, credit statistics, and GPA calculation instructions.
+                    Click here or the "View PDF" button above to preview the complete transcript.
+                </div>
+                <div class="placeholder-hint">Click here to open transcript</div>
+            </div>
+            
+            <!-- PDF Viewer (hidden by default) -->
+            <div id="pdfViewerContainer" class="pdf-viewer-container">
+                <div id="pdfLoading" class="pdf-loading" style="display: none;">
+                    <div class="spinner"></div>
+                    <div class="loading-text">Loading transcript...</div>
+                </div>
+                
+                <iframe 
+                    id="pdfViewer"
+                    class="pdf-viewer hidden"
+                    src=""
+                    width="100%" 
+                    height="100%" 
+                    frameborder="0"
+                    title="Transcript PDF File"
+                    style="border: none;"
+                >
+                    Your browser does not support PDF preview. Please <a href="my-grade.pdf">download the PDF file</a>
+                </iframe>
+                
+                <div id="pdfStatus" class="pdf-status" style="display: none;">
+                    <span>File size: <span class="pdf-size">~2.5 MB</span></span>
+                    <span>Last updated: 2025-09-23</span>
+                </div>
+            </div>
+            
+            <div style="margin-top: 20px; font-size: 13px; color: #888; text-align: center;">
+                <p>Official Transcript of Lanzhou University Academic Affairs Office | For paper copies, please contact the Academic Affairs Office</p>
+            </div>
+        </div>
+
+        <!-- Fullscreen View Mode -->
+        <div id="pdfFullscreen" class="pdf-fullscreen">
+            <button class="close-fullscreen" id="closeFullscreen">×</button>
+            <iframe 
+                id="fullscreenPdf"
+                src=""
+                frameborder="0"
+                title="Transcript PDF File (Fullscreen Mode)"
+            ></iframe>
+        </div>
+
+        <!-- Explanatory Information -->
+        <div style="background: #f8fafc; padding: 25px; border-radius: 12px; border: 1px solid #e2e8f0; margin-top: 40px;">
+            <h3 style="font-size: 16px; font-weight: 600; color: #333; margin: 0 0 15px 0; letter-spacing: 0.5px;">
+                Transcript Explanation
+            </h3>
+            <ul style="font-size: 14px; color: #666; line-height: 1.7; padding-left: 20px; margin: 0;">
+                <li>Average Grade Point Average (GPA) is calculated on a 5-point scale, with 90-100 points corresponding to 4.0-5.0 GPA</li>
+                <li>Required + Restricted Elective Courses GPA: 4.02/5.0 (including all major required and restricted elective courses)</li>
+                <li>All Courses GPA: 3.98/5.0 (including all completed courses)</li>
+                <li>Major Ranking: Top 5% (Mathematics and Applied Mathematics)</li>
+                <li>Theoretical courses: 18 class hours = 1 credit; Experimental courses: 36 class hours = 1 credit</li>
+            </ul>
+        </div>
+
+        <div id="footer">
+            Last updated: 2025-12-1 | Designed by Yi He
+        </div>
+    </div>
+
+    <script>
+        // PDF Viewer Control
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleBtn = document.getElementById('togglePdfView');
+            const pdfPlaceholder = document.getElementById('pdfPlaceholder');
+            const pdfViewer = document.getElementById('pdfViewer');
+            const pdfLoading = document.getElementById('pdfLoading');
+            const pdfStatus = document.getElementById('pdfStatus');
+            const fullscreenBtn = document.getElementById('fullscreenBtn');
+            const pdfFullscreen = document.getElementById('pdfFullscreen');
+            const fullscreenPdf = document.getElementById('fullscreenPdf');
+            const closeFullscreen = document.getElementById('closeFullscreen');
+            
+            let isPdfVisible = false;
+            let hasLoaded = false;
+            
+            // Function to open PDF viewer
+            function openPdfViewer() {
+                if (!isPdfVisible) {
+                    // Display PDF
+                    if (!hasLoaded) {
+                        // First load, show loading animation
+                        pdfLoading.style.display = 'flex';
+                        pdfViewer.classList.remove('hidden');
+                        pdfViewer.classList.add('visible');
+                        
+                        // Set PDF source
+                        pdfViewer.src = 'my-grade.pdf';
+                        
+                        // Wait for PDF to load
+                        setTimeout(() => {
+                            pdfLoading.style.display = 'none';
+                            pdfPlaceholder.classList.remove('visible');
+                            pdfPlaceholder.classList.add('hidden');
+                            pdfStatus.style.display = 'flex';
+                            fullscreenBtn.style.display = 'inline-flex';
+                            hasLoaded = true;
+                        }, 800);
+                    } else {
+                        // Already loaded, show directly
+                        pdfPlaceholder.classList.remove('visible');
+                        pdfPlaceholder.classList.add('hidden');
+                        pdfViewer.classList.remove('hidden');
+                        pdfViewer.classList.add('visible');
+                        pdfStatus.style.display = 'flex';
+                        fullscreenBtn.style.display = 'inline-flex';
+                    }
+                    
+                    toggleBtn.innerHTML = '<span></span> Hide PDF';
+                    isPdfVisible = true;
+                }
+            }
+            
+            // Function to close PDF viewer
+            function closePdfViewer() {
+                if (isPdfVisible) {
+                    // Hide PDF
+                    pdfPlaceholder.classList.remove('hidden');
+                    pdfPlaceholder.classList.add('visible');
+                    pdfViewer.classList.remove('visible');
+                    pdfViewer.classList.add('hidden');
+                    pdfStatus.style.display = 'none';
+                    
+                    toggleBtn.innerHTML = '<span></span> View PDF';
+                    isPdfVisible = false;
+                }
+            }
+            
+            // Toggle PDF viewer display
+            toggleBtn.addEventListener('click', function() {
+                if (isPdfVisible) {
+                    closePdfViewer();
+                } else {
+                    openPdfViewer();
+                }
+            });
+            
+            // Placeholder click event - open PDF when clicking placeholder
+            pdfPlaceholder.addEventListener('click', function(e) {
+                // Prevent event bubbling to avoid conflicts with inner elements
+                e.stopPropagation();
+                openPdfViewer();
+            });
+            
+            // Click event for hint text in placeholder
+            const placeholderHint = pdfPlaceholder.querySelector('.placeholder-hint');
+            if (placeholderHint) {
+                placeholderHint.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    openPdfViewer();
+                });
+            }
+            
+            // Click event for icon in placeholder
+            const placeholderIcon = pdfPlaceholder.querySelector('.placeholder-icon');
+            if (placeholderIcon) {
+                placeholderIcon.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    openPdfViewer();
+                });
+            }
+            
+            // Click event for title in placeholder
+            const placeholderTitle = pdfPlaceholder.querySelector('.placeholder-title');
+            if (placeholderTitle) {
+                placeholderTitle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    openPdfViewer();
+                });
+            }
+            
+            // Click event for description in placeholder
+            const placeholderDescription = pdfPlaceholder.querySelector('.placeholder-description');
+            if (placeholderDescription) {
+                placeholderDescription.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    openPdfViewer();
+                });
+            }
+            
+            // PDF viewer click event - don't close when clicking viewer itself
+            pdfViewer.addEventListener('click', function(e) {
+                e.stopPropagation();
+                // Do nothing when clicking the PDF viewer itself, keep it open
+            });
+            
+            // PDF viewer container click event
+            pdfViewerContainer.addEventListener('click', function(e) {
+                // Prevent closing PDF when clicking container
+                e.stopPropagation();
+            });
+            
+            // Fullscreen view function
+            fullscreenBtn.addEventListener('click', function() {
+                pdfFullscreen.classList.add('active');
+                fullscreenPdf.src = 'my-grade.pdf';
+                document.body.style.overflow = 'hidden';
+            });
+            
+            closeFullscreen.addEventListener('click', function() {
+                pdfFullscreen.classList.remove('active');
+                fullscreenPdf.src = '';
+                document.body.style.overflow = 'auto';
+            });
+            
+            // ESC key to exit fullscreen
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && pdfFullscreen.classList.contains('active')) {
+                    pdfFullscreen.classList.remove('active');
+                    fullscreenPdf.src = '';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+            
+            // Click fullscreen background to exit
+            pdfFullscreen.addEventListener('click', function(e) {
+                if (e.target === pdfFullscreen) {
+                    pdfFullscreen.classList.remove('active');
+                    fullscreenPdf.src = '';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+            
+            // Double click PDF viewer to enter fullscreen mode
+            pdfViewerContainer.addEventListener('dblclick', function() {
+                if (isPdfVisible) {
+                    pdfFullscreen.classList.add('active');
+                    fullscreenPdf.src = 'my-grade.pdf';
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+            
+            // Add keyboard shortcut: spacebar to toggle PDF display
+            document.addEventListener('keydown', function(e) {
+                // Can use spacebar to toggle if focus is not in input fields
+                if (e.key === ' ' && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+                    e.preventDefault();
+                    if (isPdfVisible) {
+                        closePdfViewer();
+                    } else {
+                        openPdfViewer();
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

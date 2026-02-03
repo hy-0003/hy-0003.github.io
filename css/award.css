@@ -1,0 +1,74 @@
+body {
+    background-color:white;
+}
+
+p {color:#252526}
+h1 {color:#252526;}
+h2 {color:#252526}
+h3 {color:#252526}
+h4 {color:#252526}
+h5 {color:#252526}
+h6 {color:#252526}
+a {color:#252526}
+
+
+
+header {
+    text-align: center;
+    margin: 20px 0 40px;
+    position: relative;
+}
+
+header h1 {
+    font-size: 3.2rem;
+    color: #1e3a8a;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+
+
+.award-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+
+.award-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    margin: 20px;
+    padding: 20px;
+    width: 300px;
+}
+.award-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.award-description {
+    font-size: 16px;
+    color: #666;
+}
+.award-description b{
+    font-size: 16px;
+    color: #252526
+}
+.award-date {
+    font-size: 14px;
+    color: #999;
+    margin-top: 10px;
+}
+.award-image {
+    max-width: 80%; /* 图片最大宽度为卡片宽度 */
+    height: auto; /* 保持图片比例 */
+    border-radius: 4px; /* 图片圆角 */
+    margin-top: 10px; /* 设置图片与上方元素的距离为 15px */
+    margin-bottom: 10px; /* 设置图片与下方元素的距离为 15px */
+    margin-left: 10%;
+    margin-right: 10%; /* 图片水平居中 */
+}
