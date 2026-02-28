@@ -126,27 +126,32 @@
         
         <!-- Project 2: iDNA Model for Gene Methylation Prediction -->
         <div class="project-card">
-            <h2 class="project-title">MEDNA-DFM Model and CAD & CWGA</h2>
+            <h2 class="project-title">MEDNA-DFM Model and XAI method: CAD & CWGA</h2>
             <p class="project-meta">City University of Hong Kong · Dr. Tianchi Lu Research Group</p>
             
             <div class="tech-tags">
                 <div class="tech-tag">Bioinformatics</div>
                 <div class="tech-tag">DNA Methylation Prediction</div>
-                <div class="tech-tag">FiLM+MoE</div>
+                <div class="tech-tag">In silico Mutagenesis</div>
                 <div class="tech-tag">Explainable AI</div>
                 <div class="tech-tag">CWGA, CAD</div>
                 <div class="tech-tag">Generating New Methylation Hypotheses</div>
             </div>
             
             <p class="project-description">
-                <b>Abstract</b>: The model performs DNA methylation prediction on 17 standard datasets, outperforming SOTA.
-                Innovatively introduced the DNABERT2 model, constructed the first FiLM+MoE Fusion module to achieve dynamic feature adjustment, and completed efficient feature fusion by combining lightweight Transformer experts and gating mechanisms.
-                Addressing the interpretability issue in this field, we proposed the Bio-Prism interpretability framework for comprehensive and systematic analysis. Verified known motifs, discovered new potential motifs, and in-depth analysis inspired new biological hypotheses.
+                <b>Abstract</b>: Accurate computational identification of DNA methylation is essential for understanding epigenetic regulation. Although deep learning excels in this binary classification task,
+                its "black-box" nature impedes biological insight. We address this by introducing a high-performance model MEDNA-DFM, alongside mechanism-inspired signal purification algorithms. Our investigation
+                demonstrates that MEDNA-DFM effectively captures conserved methylation patterns, achieving robust distinction across diverse species. Validation on external independent datasets confirms that 
+                the model's generalization is driven by conserved intrinsic motifs (e.g., GC content) rather than phylogenetic proximity. Furthermore, applying our developed algorithms extracted motifs with 
+                significantly higher reliability than prior studies. Finally, empirical evidence from a Drosophila 6mA case study prompted us to propose a "sequence-structure synergy" hypothesis, suggesting 
+                that the GAGG core motif and an upstream A-tract element function cooperatively. We further validated this hypothesis via in silico mutagenesis, confirming that the ablation of either or both 
+                elements significantly degrades the model's recognition capabilities. This work provides a powerful tool for methylation prediction and demonstrates how explainable deep learning can drive both 
+                methodological innovation and the generation of biological hypotheses.
             </p>
             
             <div class="contribution-highlight">
                 <strong>Expected Outcomes:</strong> 
-                <span>Academic paper at SCI Zone 1 Top or higher, Bio-Prism academic brand website, technical documentation, GitHub open-source model, fine-tuned model</span>
+                <span>Academic paper at SCI Zone 1 Top or higher, Academic brand website, technical documentation, GitHub open-source model, fine-tuned model</span>
             </div>
             
             <!-- Core Contribution Slider -->
