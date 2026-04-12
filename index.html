@@ -4,37 +4,353 @@
     <meta charset="UTF-8">
     <link rel="icon" href="world.ico" type="image/x-icon">
     <link href="index.css" rel="stylesheet" type="text/css">
+    <link href="ehome/ehome.css" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yi He | Mathematics & AI</title>
     <meta name="google-site-verification" content="glXZus23uKaDp-PycXaXPK6z0KRp4smyQzl9H428S1M" />
+    <style>
+        html, body { height: auto; }
+        body {
+            padding: 0 !important;
+            min-height: 100vh;
+            display: block;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+        .main-content {
+            padding: 80px 20px 0 20px;
+            height: auto;
+            display: block;
+        }
+        #subpageContainer {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: none;
+        }
+        #contentFrame {
+            width: 100%;
+            height: calc(100vh - 170px);
+            border: none;
+            display: block;
+            background: #fff;
+        }
+        @media (max-width: 850px) {
+            .main-content {
+                padding-top: 130px;
+            }
+            #contentFrame {
+                height: calc(100vh - 250px);
+            }
+        }
+    </style>
 </head>
 <body>
 
     <header class="site-header">
         <div class="header-inner">
-            <a href="#" onclick="loadPage(this,'ehome.html')" class="logo">Yi He</a>
+            <a href="index.html" class="logo">Yi He</a>
 
             <nav class="site-nav">
                 <ul>
-                    <li><a class="active" href="#" onclick="loadPage(this,'ehome/ehome.html')">Home</a></li>
-                    <li><a href="#" onclick="loadPage(this,'grade/grade.html')">Transcripts</a></li>
-                    <li><a href="#" onclick="loadPage(this,'research/research.html')">Research</a></li>
-                    <li><a href="#" onclick="loadPage(this,'internship/internship.html')">Internships</a></li>
-                    <li><a href="#" onclick="loadPage(this,'award/award.html')">Awards</a></li>
-                    <!--<li><a href="#" onclick="loadPage(this,'interest_exploration/interest.html')">Interests</a></li>
-                    <li><a href="#" onclick="loadPage(this,'ability/ability.html')">Awards</a></li>
-                    <li><a href='#' onclick="loadPage(this,'zhihu/zhihu.html')">Zhihu</a></li> -->
-                    <li><a href="#" onclick="loadPage(this,'connect/connect.html')">Contact</a></li>
+                    <li><a class="active" data-nav="home" href="index.html#home" onclick="return showHome(event)">Home</a></li>
+                    <li><a data-nav="transcripts" href="grade/grade.html" onclick="return showSubPage(event, 'grade/grade.html', 'transcripts')">Transcripts</a></li>
+                    <li><a data-nav="research" href="research/research.html" onclick="return showSubPage(event, 'research/research.html', 'research')">Research</a></li>
+                    <li><a data-nav="internships" href="internship/internship.html" onclick="return showSubPage(event, 'internship/internship.html', 'internships')">Internships</a></li>
+                    <li><a data-nav="awards" href="award/award.html" onclick="return showSubPage(event, 'award/award.html', 'awards')">Awards</a></li>
+                    <li><a data-nav="contact" href="connect/connect.html" onclick="return showSubPage(event, 'connect/connect.html', 'contact')">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     
     <main class="main-content">
-        <iframe id="contentFrame" src="ehome/ehome.html" frameborder="0" allow="same-origin; scripts; microphone"></iframe>
+  <div id="layout-content">
+    
+    <div class="profile-header">
+        <div class="profile-text">
+            <h1 class="my-name">Yi He</h1>
+            <p class="my-title">Undergraduate Student · Mathematics and Applied Mathematics</p>
+            <p class="my-institution">
+                <a href="https://cycollege.lzu.edu.cn/" target="_blank">Cuiying Honors College, Lanzhou University</a><br>
+                <b> National Program for Top Talents in Basic Sciences </b>
+            </p>
+            <div class="profile-links">
+                <a href="https://github.com/hy-0003" target="_blank" class="btn">GitHub</a>
+                <a href="Yi_He_Resume_25.12.6.pdf" class="btn">CV</a>
+                <a href="chome/chome.html" class="btn btn-outline">中文页面</a>
+            </div>
+        </div>
+        <div class="profile-img-container">
+            <img src="home_image/YiHe.jpg" alt="Yi He" class="profile-img" />
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>About Me</h2>
+        <p>I am currently a third-year undergraduate student pursuing Mathematics and Applied Mathematics at Cuiying Honors College, Lanzhou University. My research focuses on the intersection of mathematics and artificial intelligence.</p>
+        <p>My primary research interests lie in <b>AI × Science</b>, <b>Deep BSDE Method</b>, <b>Bioinformatics</b>, and <b>Computational Algebra</b>.</p>
+        <p>I have led or participated in multiple interdisciplinary research projects, including the development of spherical BSDE algorithms, the construction of the DNA methylation prediction model and interpretability framework Bio-Prism, and the application of point cloud equivariant networks in part representation recognition.</p>
+        <!---<p><b>Future Directions</b>: I aim to contribute to research in <b>world models</b>, <b>embodied intelligence</b>, and <b>AI × science</b>.</p> --->
+        <p><b>Email: heyi2023@lzu.edu.cn</b></p>
+    </div>
+
+    <div class="section">
+        <h2>Education</h2>
+        <div class="edu-card">
+            <div class="edu-logo">
+                <img src="home_image/ucblogo.png" alt="UCB Logo"> 
+            </div>
+            <div class="edu-content">
+                <div class="edu-header">
+                    <h3>University of California, Berkeley</h3>
+                    <span class="date">Jan. 2026 - May. 2026</span>
+                </div>
+                <div style="margin-bottom: 8px; font-style: italic; color: #000000;">
+                    Visiting International Student (Semester Study Abroad)
+                </div>
+                <ul>
+                    <li><b>Selected Courses</b>: CS 61B (Data Structures), Introduction to Neurotechnology</li>
+                    <li><b>Focus</b>: Computer Science & Applied Mathematics</li>
+                    <li><b>Affiliation</b>: Member of Open Computing Facility (OCF)</li>
+                </ul>
+            </div>
+        </div>
+        <br>
+
+        <div class="edu-card">
+            <div class="edu-logo">
+                <img src="home_image/lzulogo.png" alt="LZU Logo"> 
+            </div>
+            <div class="edu-content">
+                <div class="edu-header">
+                    <h3>Lanzhou University</h3>
+                    <span class="date">Sept. 2023 - Present</span>
+                </div>
+                <div style="margin-bottom: 8px; font-style: italic; color: #000000;">
+                    B.S. in Mathematics and Applied Mathematics, Cuiying Honors College
+                </div>
+                <ul>
+                    <li><b>GPA</b>: 4.02 / 5.0</li>
+                    <li><b>Rank</b>: Top 5%</li>
+                    <li><b>Awards</b>: 2025 MCM/ICM Finalist (Top 2%)</li>
+                    <li><b>Extracurricular</b>: Captain of the Swimming Team (School of Mathematics and Statistics); Captain of the Track and Field Team (Cuiying Honors College)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Skills</h2>
+        <div class="skills-scroller">
+            <div class="skill-card">
+                <b>Programming Languages</b>
+                <p>Python (PyTorch)</p>
+                <p>C & C++</p>
+                <p>MATLAB</p>
+            </div>
+            <div class="skill-card">
+                <b>Development Tools</b>
+                <p>VS Code & SSH</p>
+                <p>Linux & Conda</p>
+            </div>
+            <div class="skill-card">
+                <b>Algorithm Foundations</b>
+                <p>Numerical Computation</p>
+                <p>Monte Carlo Methods</p>
+                <p>FFT & IFFT</p>
+            </div>
+            <div class="skill-card">
+                <b>Authoring Tools</b>
+                <p>LaTeX</p>
+                <p>Markdown</p>
+                <p>HTML & CSS</p>
+            </div>
+            <div class="skill-card">
+                <b>Other Skills</b>
+                <p>AutoDL Cloud Computing</p>
+                <p>Web Deployment</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Leading Research Experience</h2>
+        
+        <div class="research-card">
+            <div class="research-text">
+                <h3>Deep BSDEs: Solving Spherical Fokker-Planck and Feynman-Kac Equations</h3>
+                <p class="meta">Lanzhou University · Prof. Weihua Deng's Group (Distinguished Young Scholar); Collaborative Advisor: Dr. Heng Wang</p>
+                <p class="desc">Developed a numerical solution method for high-dimensional partial differential equations under spherical geometric constraints, combining deep learning with backward stochastic differential equations (BSDEs) to address the curse of dimensionality in traditional methods.</p>
+                <div class="tags">
+                    <span>Lead Researcher</span>
+                    <span>AI for PDE</span>
+                    <span>Deep BSDE</span>
+                    <span>Spherical Geometry</span>
+                </div>
+            </div>
+            <div class="research-img">
+                <img src="ehome/bsde.png" alt="BSDE Research Cover" onerror="this.style.display='none'">
+            </div>
+        </div>
+
+        <div class="research-card">
+            <div class="research-text">
+                <h3>MEDNA-DFM Model and XAI method: CAD & CWGA</h3>
+                <p class="meta">City University of Hong Kong · Dr. Tianchi Lu's Group</p>
+                <p class="desc">Developed a DNA methylation prediction framework based on Dual-View FiLM-MoE architectures, and proposed the CAD & CWGA interpretability method, emphasizing internal mechanism analysis as a necessary condition for interpretability.</p>
+                
+                <div style="margin: 8px 0 12px 0; font-size: 0.95em; line-height: 1.6;">
+                    <span style="display: inline-block; margin-right: 20px;">
+                        <b>📄 Paper:</b> <a href="https://arxiv.org/abs/2602.22850" target="_blank" style="color: #0366d6; text-decoration: none; border-bottom: 1px dashed #0366d6; padding-bottom: 1px;">arXiv:2602.22850</a>
+                    </span>
+                    <span style="display: inline-block; margin-right: 20px;">
+                        <b>✨ Web:</b> <a href="https://huggingface.co/spaces/hy-0003/MEDNA-DFM-Web" target="_blank" style="color: #0366d6; text-decoration: none; border-bottom: 1px dashed #0366d6; padding-bottom: 1px;">MEDNA-DFM-Web</a>
+                    </span>
+                    <span style="display: inline-block;">
+                        <b>📌 Status:</b> Under Review at <i><b>Advanced Science</b></i>
+                    </span>
+                </div>
+
+                <div class="tags">
+                    <span>Lead Researcher (1st Author)</span>
+                    <span>Bioinformatics</span>
+                    <span>MEDNA-DFM</span>
+                    <span>CAG & CWGA</span>
+                    <span>Explainable AI</span>
+                </div>
+            </div>
+            <div class="research-img">
+                <img src="ehome/MEDNA-DFM.png" alt="Bio Research Cover" onerror="this.style.display='none'">
+            </div>
+        </div>
+        <!---
+        <div class="demo-showcase">
+            <h3 style="margin-top: 0; margin-bottom: 15px; font-size: 1.3rem;">🔬 Interactive Demo: MEDNA‑DFM</h3>
+            <div class="demo-card">
+                <div class="demo-preview">
+                    <img src="ehome/medna_demo.png" alt="MEDNA-DFM Web Demo Screenshot" />
+                    <div class="demo-overlay">
+                        <span>⚡ Predict DNA Methylation in Real Time</span>
+                        <a href="https://huggingface.co/spaces/hy-0003/MEDNA-DFM-Web" target="_blank" class="demo-btn">Open Live Demo</a>
+                    </div>
+                </div>
+                <p style="margin-top: 12px; color: #555; font-size: 0.95rem; text-align: center;">
+                    Try the online predictor – no installation required.
+                </p>
+            </div>
+        </div>
+        --->
+
+        <h2>Collaborative Research Experience</h2>
+        <div class="research-card">
+            <div class="research-text">
+                <h3>Fixed points of orientation-preserving full transformation</h3>
+                <p class="meta">Lanzhou University · Prof. Wenting Zhang's Group; Collaborative Advisor: Yang An, M.S.</p>
+                <p class="desc">Implemented computations for various semigroup mappings and fixed point calculations, with statistical analysis to propose novel patterns.</p>
+                
+                <div style="margin: 8px 0 12px 0; font-size: 0.95em; line-height: 1.6;">
+                    <span style="display: inline-block; color: #555;">
+                        <b>📌 Status:</b> Under Review at <i><b>Discrete Applied Mathematics</b></i>
+                    </span>
+                </div>
+
+                <div class="tags">
+                    <span>Code Member</span>
+                    <span>Computational Group Theory</span>
+                    <span>Combinatorics</span>
+                </div>
+            </div>
+            <div class="research-img">
+                <img src="ehome/计算代数.png" alt="Computational Algebra Cover" onerror="this.style.display='none'">
+            </div>
+        </div>
+
+        <div class="research-card">
+            <div class="research-text">
+                <h3>PathMoG : A Pathway-Centric Modular Graph Network for Multi-Omics Cancer Survival Prediction</h3>
+                <p class="meta">City University of Hong Kong · Dr. Tianchi Lu's Group</p>
+                <p class="desc">Contributed to the core model design by introducing <strong>Feature-wise Linear Modulation (FiLM)</strong> as a key architectural innovation.</p>
+                
+                <div style="margin: 8px 0 12px 0; font-size: 0.95em; line-height: 1.6;">
+                    <span style="display: inline-block; color: #555;">
+                        <b>📌 Status:</b> Under Review at <i><b>IEEE Journal of Biomedical and Health Informatics</b></i>
+                    </span>
+                </div>
+
+                <div class="tags">
+                    <span>Model Design Member</span>
+                    <span>Survival Prediction</span>
+                    <span>Multi-Omics Fusion</span>
+                </div>
+            </div>
+            <div class="research-img">
+                <img src="ehome/wd.png" alt="PathMoG" onerror="this.style.display='none'">
+            </div>
+        </div>
+
+        <div class="research-card">
+            <div class="research-text">
+                <h3>HBGSA: Hydrogen Bond Graph with Self-Attention for Drug-Target Binding Affinity Prediction</h3>
+                <p class="meta">City University of Hong Kong · Dr. Tianchi Lu's Group</p>
+                
+                <div style="margin: 8px 0 12px 0; font-size: 0.95em; line-height: 1.6;">
+                    <span style="display: inline-block; color: #555;">
+                        <b>📌 Status:</b> Under Review at <i><b>Knowledge-Based Systems</b></i>
+                    </span>
+                </div>
+
+                <div class="tags">
+                    <span>Core Member</span>
+                    <span>GNN</span>
+                    <span>Hydrogen Bonds</span>
+                    <span>Drug-Target Affinity</span>
+                </div>
+            </div>
+            <div class="research-img">
+                <img src="ehome/kjx.png" alt="HBGSA" onerror="this.style.display='none'">
+            </div>
+        </div>
+
+        <div class="research-card">
+            <div class="research-text">
+                <h3>Industrial Part Representation and Assembly</h3>
+                <p class="meta">Beijing Normal University-Hong Kong Baptist University United International College · Prof. Tieyong Zeng's UIC Path Group; Provincial Key Project</p>
+                <p class="desc">Adopted point cloud-level contrastive learning and equivariant neural network approaches to transfer PointNet for part representation learning.</p>
+                <div class="tags">
+                    <span>Core Member</span>
+                    <span>PointNet</span>
+                    <span>Contrastive Learning</span>
+                    <span>REQNN</span>
+                </div>
+            </div>
+            <div class="research-img">
+                <img src="ehome/3DREQNN.png" alt="3D Research Cover" onerror="this.style.display='none'">
+            </div>
+        </div>
+        
+        <p><a href="research/research.html" class="read-more">View All Research Experiences &rarr;</a></p>
+    </div>
+
+    <div class="section llm-section">
+        <h2>Ask "Ver" (My AI Assistant)</h2>
+        <p>I developed a personalized AI assistant <b>Ver</b> based on Dify, which has been trained on all my research notes and project codes.</p>
+        <button id="loadLLMButton" class="llm-btn">Wake up Ver to Chat</button>
+        <div id="llmContainer" style="display:none; margin-top:20px; border: 1px solid #eee; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+            <iframe id="llmFrame" style="width: 100%; height: 700px;" frameborder="0" allow="microphone"></iframe>
+        </div>
+    </div>
+
+    <div id="footer">
+        Last updated: February 28, 2026 | Designed by Yi He
+    </div>
+  </div>
+
+  <div id="subpageContainer">
+    <iframe id="contentFrame" src="" frameborder="0" allow="same-origin; scripts; microphone"></iframe>
+  </div>
     </main>
 
-    
     <footer class="site-footer">
         <div class="stats-container">
             <div class="stat-item">
@@ -52,6 +368,71 @@
             <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=AST9I0FR_kQOd6aAHqTzwYdyz7FpPwBuqv6B5dshAnY&cl=ffffff&w=a"></script>
         </div>
     </footer>
+
+    <script>
+        function setActiveNav(navKey) {
+            var navLinks = document.querySelectorAll('.site-nav a[data-nav]');
+            navLinks.forEach(function (link) {
+                if (link.getAttribute('data-nav') === navKey) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+
+        function showHome(event, updateHash) {
+            if (event) event.preventDefault();
+            if (typeof updateHash === 'undefined') updateHash = true;
+
+            var home = document.getElementById('layout-content');
+            var subpage = document.getElementById('subpageContainer');
+            home.style.display = 'block';
+            subpage.style.display = 'none';
+            setActiveNav('home');
+
+            if (updateHash && window.location.hash !== '#home') {
+                window.location.hash = 'home';
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            return false;
+        }
+
+        function showSubPage(event, pageUrl, navKey, updateHash) {
+            if (event) event.preventDefault();
+            if (typeof updateHash === 'undefined') updateHash = true;
+
+            var home = document.getElementById('layout-content');
+            var subpage = document.getElementById('subpageContainer');
+            var frame = document.getElementById('contentFrame');
+
+            home.style.display = 'none';
+            subpage.style.display = 'block';
+            if (frame.src !== pageUrl) {
+                frame.src = pageUrl;
+            }
+            setActiveNav(navKey);
+
+            if (updateHash && window.location.hash !== '#' + navKey) {
+                window.location.hash = navKey;
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            return false;
+        }
+
+        function applyRouteByHash() {
+            var route = (window.location.hash || '#home').replace('#', '').toLowerCase();
+            if (route === 'transcripts') return showSubPage(null, 'grade/grade.html', 'transcripts', false);
+            if (route === 'research') return showSubPage(null, 'research/research.html', 'research', false);
+            if (route === 'internships') return showSubPage(null, 'internship/internship.html', 'internships', false);
+            if (route === 'awards') return showSubPage(null, 'award/award.html', 'awards', false);
+            if (route === 'contact') return showSubPage(null, 'connect/connect.html', 'contact', false);
+            return showHome(null, false);
+        }
+
+        window.addEventListener('hashchange', applyRouteByHash);
+        window.addEventListener('DOMContentLoaded', applyRouteByHash);
+    </script>
 
     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     <script src="js/ori.js"></script>
