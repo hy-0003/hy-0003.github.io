@@ -31,6 +31,16 @@ body { padding: 0 20px 80px 20px; box-sizing: border-box; }
     border-bottom: 1px solid #f0f0f0;
 }
 
+/* 分区标题（我组织的 / 我参与的） */
+.section-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: #333;
+    margin: 34px 0 16px;
+    padding-left: 12px;
+    border-left: 3px solid #0066cc;
+}
+
 /* === 项目网格：n 行 × 2 列 === */
 .projects-grid {
     display: grid;
@@ -101,6 +111,43 @@ body { padding: 0 20px 80px 20px; box-sizing: border-box; }
     line-height: 1.65;
     margin: 0 0 16px 0;
     opacity: 0.92;
+}
+
+/* 贡献说明 */
+.project-contribution {
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+    font-size: 13px;
+    color: #555;
+    line-height: 1.6;
+    background: #f8fafc;
+    border: 1px solid #eef1f4;
+    border-radius: 8px;
+    padding: 9px 12px;
+    margin: 0 0 14px 0;
+}
+
+.project-contribution i {
+    color: #0066cc;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+/* 目标列表 */
+.project-aims {
+    list-style: none;
+    margin: 0 0 14px 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.project-aims li {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.5;
 }
 
 /* 链接按钮 */
